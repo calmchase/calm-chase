@@ -1,10 +1,35 @@
-.DS_Store
 node_modules
-/build
+
+# Output
+.output
+.vercel
+/dev-dist
 /.svelte-kit
+/build
 /package
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
 .env
 .env.*
+!.env.ci
 !.env.example
+!.env.test
+
+# Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+/prisma/dev.db
+/docker-data
+settings.json
+auth.json
+.nyc_output
+coverage
+scripts/exportDB.ts
+/coverage*
+
+# ESLint
+.eslintcache
