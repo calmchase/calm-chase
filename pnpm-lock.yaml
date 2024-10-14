@@ -17,6 +17,9 @@ importers:
       '@fontsource-variable/inter':
         specifier: ^5.1.0
         version: 5.1.0
+      '@fontsource-variable/manrope':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@formkit/auto-animate':
         specifier: ^0.8.2
         version: 0.8.2
@@ -1447,6 +1450,9 @@ packages:
 
   '@fontsource-variable/inter@5.1.0':
     resolution: {integrity: sha512-Wj2dUGP0vUpxRGQTXQTCNJO+aLcFcQm+gUPXfj/aS877bQkEPBPv9JvZJpwdm2vzelt8NTZ+ausKlBCJjh2XIg==}
+
+  '@fontsource-variable/manrope@5.1.0':
+    resolution: {integrity: sha512-QjvtYRsCM0UTiOlBs21nNuFpHVcsiBwQuHGIFCTMsQgJvl0jdi4LYiD9sYQ11RplaeZcN6/Z8ynE9Spicqkv0w==}
 
   '@formkit/auto-animate@0.8.2':
     resolution: {integrity: sha512-SwPWfeRa5veb1hOIBMdzI+73te5puUBHmqqaF1Bu7FjvxlYSz/kJcZKSa9Cg60zL0uRNeJL2SbRxV6Jp6Q1nFQ==}
@@ -6463,6 +6469,8 @@ snapshots:
   '@fontsource-variable/archivo@5.1.0': {}
 
   '@fontsource-variable/inter@5.1.0': {}
+
+  '@fontsource-variable/manrope@5.1.0': {}
 
   '@formkit/auto-animate@0.8.2': {}
 

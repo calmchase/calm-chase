@@ -2,11 +2,14 @@
   import { page } from "$app/stores";
   import Sonner from "$lib/components/ui/sonner/sonner.svelte";
   import { repositoryName } from "$lib/prismicio";
+  import "@fontsource-variable/inter";
+  import "@fontsource-variable/manrope";
   import { PrismicPreview } from "@prismicio/svelte/kit";
   import "highlight.js/styles/github-dark.css";
   import { pwaAssetsHead } from "virtual:pwa-assets/head";
   import { pwaInfo } from "virtual:pwa-info";
   import "../app.css";
+
   $: webManifestLink = pwaInfo ? pwaInfo.webManifest.linkTag : "";
 </script>
 
