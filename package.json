@@ -22,7 +22,7 @@
     ]
   },
   "engines": {
-    "pnpm": ">= 9.0.0",
+    "pnpm": ">= 8.0.0",
     "npm": "Please use pnpm instead of npm.",
     "yarn": "Please use pnpm instead of yarn."
   },
