@@ -22,8 +22,8 @@
     ]
   },
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">= 8.0.0",
+    "node": ">= 20.18.0",
+    "pnpm": ">= 9.0.0",
     "npm": "Please use pnpm instead of npm.",
     "yarn": "Please use pnpm instead of yarn."
   },
@@ -67,7 +67,6 @@
     "@playwright/test": "^1.48.0",
     "@slicemachine/adapter-sveltekit": "^0.3.51",
     "@sveltejs/adapter-auto": "^3.2.5",
-    "@sveltejs/adapter-cloudflare": "^4.7.3",
     "@sveltejs/enhanced-img": "^0.3.9",
     "@sveltejs/kit": "^2.7.0",
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
