@@ -24,12 +24,28 @@ export default {
       },
       animation: {
         tilt: "tilt 10s infinite linear",
-
+        flip: "flip 6s infinite steps(2, end)",
+        kitrotate: "kitrotate 3s linear infinite both",
+        shine: "shine 2s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
       },
       keyframes: {
+        shine: {
+          from: { backgroundPosition: "0 0" },
+          to: { backgroundPosition: "-200% 0" },
+        },
+        flip: {
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+        kitrotate: {
+          to: {
+            transform: "rotate(90deg)",
+          },
+        },
         tilt: {
           "0%, 50%, 100%": {
             transform: "rotate(0deg)",
@@ -84,6 +100,7 @@ export default {
       },
       fontFamily: {
         int: ["Inter Variable", ...fontFamily.sans],
+        grot: ["Schibsted Grotesk Variable", ...fontFamily.serif],
         man: ["Manrope Variable"],
       },
       colors: {

@@ -1,0 +1,42 @@
+{
+  "id": "programs",
+  "type": "SharedSlice",
+  "name": "Programs",
+  "description": "Programs",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "programs": {
+          "type": "Group",
+          "config": {
+            "label": "Programs",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": "Personality Development"
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": "Immersive 3-month program to enhance your personality, featuring both online and offline activities"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

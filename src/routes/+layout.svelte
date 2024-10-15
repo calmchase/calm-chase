@@ -3,9 +3,9 @@
   import Sonner from "$lib/components/ui/sonner/sonner.svelte";
   import { repositoryName } from "$lib/prismicio";
   import Footer from "@/components/Footer.svelte";
-  import Header from "@/components/Header.svelte";
   import "@fontsource-variable/inter";
   import "@fontsource-variable/manrope";
+  import "@fontsource-variable/schibsted-grotesk";
   import { PrismicPreview } from "@prismicio/svelte/kit";
   import "highlight.js/styles/github-dark.css";
   import { pwaAssetsHead } from "virtual:pwa-assets/head";
@@ -39,7 +39,6 @@
   {/if}
 </svelte:head>
 <main class="bg-black font-int">
-  <Header scaffold="{data.scaffold}" />
   <slot />
   <Footer scaffold="{data.scaffold}" />
 </main>

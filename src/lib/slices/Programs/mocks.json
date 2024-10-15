@@ -1,0 +1,98 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "programs": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Personality Development"
+                }
+              ],
+              [
+                "description",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Immersive 3-month program to enhance your personality, featuring both online and offline activities"
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "SSB Preparations"
+                }
+              ],
+              [
+                "description",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Our proven methods and expert guidance will equip you with the skills and confidence needed to excel in the selection process."
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "SSB Preparations"
+                }
+              ],
+              [
+                "description",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Our proven methods and expert guidance will equip you with the skills and confidence needed to excel in the selection process."
+                }
+              ]
+            ]
+          },
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "description",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Immersive 3-month program to enhance your personality, featuring both online and offline activities"
+                }
+              ],
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "type": "Text",
+                  "value": "Personality Development"
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "items": []
+  }
+]

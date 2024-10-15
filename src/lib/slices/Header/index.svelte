@@ -94,7 +94,7 @@
     </div>
   </header>
   <h3
-    class="mt-22 px-8 pb-3 text-center font-man text-2xl font-black md:mt-96 md:pb-5 md:text-5xl">
+    class="mt-22 px-8 pb-3 text-center font-grot text-2xl font-black md:mt-96 md:pb-5 md:text-5xl">
     {slice.primary.title}
   </h3>
   {#if link}

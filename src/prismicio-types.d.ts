@@ -369,6 +369,78 @@ type HeaderSliceVariation = HeaderSliceDefault;
  */
 export type HeaderSlice = prismic.SharedSlice<"header", HeaderSliceVariation>;
 
+/**
+ * Item in *Programs → Default → Primary → Programs*
+ */
+export interface ProgramsSliceDefaultPrimaryProgramsItem {
+  /**
+   * Title field in *Programs → Default → Primary → Programs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Personality Development
+   * - **API ID Path**: programs.default.primary.programs[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *Programs → Default → Primary → Programs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Immersive 3-month program to enhance your personality, featuring both online and offline activities
+   * - **API ID Path**: programs.default.primary.programs[].description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Programs → Default → Primary*
+ */
+export interface ProgramsSliceDefaultPrimary {
+  /**
+   * Programs field in *Programs → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: programs.default.primary.programs[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  programs: prismic.GroupField<
+    Simplify<ProgramsSliceDefaultPrimaryProgramsItem>
+  >;
+}
+
+/**
+ * Default variation for Programs Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProgramsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProgramsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Programs*
+ */
+type ProgramsSliceVariation = ProgramsSliceDefault;
+
+/**
+ * Programs Shared Slice
+ *
+ * - **API ID**: `programs`
+ * - **Description**: Programs
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProgramsSlice = prismic.SharedSlice<
+  "programs",
+  ProgramsSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -406,6 +478,11 @@ declare module "@prismicio/client" {
       HeaderSliceDefaultPrimary,
       HeaderSliceVariation,
       HeaderSliceDefault,
+      ProgramsSlice,
+      ProgramsSliceDefaultPrimaryProgramsItem,
+      ProgramsSliceDefaultPrimary,
+      ProgramsSliceVariation,
+      ProgramsSliceDefault,
     };
   }
 }

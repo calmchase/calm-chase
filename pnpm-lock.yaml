@@ -20,6 +20,9 @@ importers:
       '@fontsource-variable/manrope':
         specifier: ^5.1.0
         version: 5.1.0
+      '@fontsource-variable/schibsted-grotesk':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@formkit/auto-animate':
         specifier: ^0.8.2
         version: 0.8.2
@@ -1456,6 +1459,9 @@ packages:
 
   '@fontsource-variable/manrope@5.1.0':
     resolution: {integrity: sha512-QjvtYRsCM0UTiOlBs21nNuFpHVcsiBwQuHGIFCTMsQgJvl0jdi4LYiD9sYQ11RplaeZcN6/Z8ynE9Spicqkv0w==}
+
+  '@fontsource-variable/schibsted-grotesk@5.1.0':
+    resolution: {integrity: sha512-9B4G6ZKzN7ueCbN7lluZp6tSpOHnO7pAuMRIdd2QOFW3jMy1cf+75P5MsCn8PSvNtqEPzbNR1K6a3JDEqUSJ4Q==}
 
   '@formkit/auto-animate@0.8.2':
     resolution: {integrity: sha512-SwPWfeRa5veb1hOIBMdzI+73te5puUBHmqqaF1Bu7FjvxlYSz/kJcZKSa9Cg60zL0uRNeJL2SbRxV6Jp6Q1nFQ==}
@@ -6496,6 +6502,8 @@ snapshots:
   '@fontsource-variable/inter@5.1.0': {}
 
   '@fontsource-variable/manrope@5.1.0': {}
+
+  '@fontsource-variable/schibsted-grotesk@5.1.0': {}
 
   '@formkit/auto-animate@0.8.2': {}
 
