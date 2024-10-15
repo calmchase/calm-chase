@@ -84,14 +84,14 @@ export default {
       },
       fontFamily: {
         int: ["Inter Variable", ...fontFamily.sans],
-        arch: ["Archivo Variable"],
+        man: ["Manrope Variable"],
       },
       colors: {
         blue1: "#001A32",
         grey1: "#333333",
         white1: "#F5F5F5",
         red1: "#FF5555",
-        black1: "#B5A57D",
+        yellow1: "#B5A57D",
         border: "hsl(var(--border) / <alpha-value>)",
         input: "hsl(var(--input) / <alpha-value>)",
         ring: "hsl(var(--ring) / <alpha-value>)",

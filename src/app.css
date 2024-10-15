@@ -72,6 +72,7 @@
     @apply border-border;
   }
   body {
+    font-display: swap;
     font-family: "Inter Variable", sans-serif;
     @apply grid bg-background bg-repeat text-foreground;
   }

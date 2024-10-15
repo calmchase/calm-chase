@@ -2,6 +2,8 @@
   import { page } from "$app/stores";
   import Sonner from "$lib/components/ui/sonner/sonner.svelte";
   import { repositoryName } from "$lib/prismicio";
+  import Footer from "@/components/Footer.svelte";
+  import Header from "@/components/Header.svelte";
   import "@fontsource-variable/inter";
   import "@fontsource-variable/manrope";
   import { PrismicPreview } from "@prismicio/svelte/kit";
@@ -9,7 +11,9 @@
   import { pwaAssetsHead } from "virtual:pwa-assets/head";
   import { pwaInfo } from "virtual:pwa-info";
   import "../app.css";
+  import type { LayoutData } from "./$types";
 
+  export let data: LayoutData;
   $: webManifestLink = pwaInfo ? pwaInfo.webManifest.linkTag : "";
 </script>
 
@@ -34,6 +38,11 @@
     <meta name="twitter:card" content="summary_large_image" />
   {/if}
 </svelte:head>
-<main class="font-int"><slot /></main>
+<main class="bg-black font-int">
+  <Header scaffold="{data.scaffold}" />
+  <slot />
+  <Footer scaffold="{data.scaffold}" />
+</main>
+
 <Sonner />
 <PrismicPreview {repositoryName} />

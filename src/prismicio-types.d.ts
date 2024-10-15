@@ -4,107 +4,6 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-/**
- * Item in *Footer → Navigation*
- */
-export interface FooterDocumentDataNavigationItem {
-  /**
-   * Link field in *Footer → Navigation*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.navigation[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * Label field in *Footer → Navigation*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.navigation[].label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  label: prismic.KeyTextField;
-
-  /**
-   * CTA Button field in *Footer → Navigation*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: footer.navigation[].cta_button
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  cta_button: prismic.BooleanField;
-}
-
-/**
- * Content for Footer documents
- */
-interface FooterDocumentData {
-  /**
-   * Site Title field in *Footer*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.site_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  site_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Footer*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.meta_description
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * OG Image field in *Footer*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.og_image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  og_image: prismic.ImageField<never>;
-
-  /**
-   * Navigation field in *Footer*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.navigation[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  navigation: prismic.GroupField<Simplify<FooterDocumentDataNavigationItem>>;
-}
-
-/**
- * Footer document from Prismic
- *
- * - **API ID**: `footer`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type FooterDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<FooterDocumentData>,
-    "footer",
-    Lang
-  >;
-
 type PageDocumentDataSlicesSlice = RichTextSlice;
 
 /**
@@ -177,7 +76,231 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = FooterDocument | PageDocument;
+/**
+ * Item in *Scaffold → Reach us*
+ */
+export interface ScaffoldDocumentDataReachUsItem {
+  /**
+   * Link field in *Scaffold → Reach us*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.reach_us[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * SVG field in *Scaffold → Reach us*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.reach_us[].svg
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  svg: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Scaffold → Socials*
+ */
+export interface ScaffoldDocumentDataSocialsItem {
+  /**
+   * Link field in *Scaffold → Socials*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.socials[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * SVG field in *Scaffold → Socials*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.socials[].svg
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  svg: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Scaffold → Company*
+ */
+export interface ScaffoldDocumentDataCompanyItem {
+  /**
+   * Link field in *Scaffold → Company*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.company[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * SVG field in *Scaffold → Company*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.company[].svg
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  svg: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Scaffold → Quick Links*
+ */
+export interface ScaffoldDocumentDataQuickLinksItem {
+  /**
+   * Link field in *Scaffold → Quick Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.quick_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * SVG field in *Scaffold → Quick Links*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.quick_links[].svg
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  svg: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Scaffold → Footer*
+ */
+export interface ScaffoldDocumentDataFooterItem {
+  /**
+   * Link field in *Scaffold → Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.footer[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Content for Scaffold documents
+ */
+interface ScaffoldDocumentData {
+  /**
+   * Site Title field in *Scaffold*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.site_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  site_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Scaffold*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.meta_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * OG Image field in *Scaffold*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.og_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  og_image: prismic.ImageField<never>;
+
+  /**
+   * Reach us field in *Scaffold*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.reach_us[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  reach_us: prismic.GroupField<Simplify<ScaffoldDocumentDataReachUsItem>>;
+
+  /**
+   * Socials field in *Scaffold*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.socials[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  socials: prismic.GroupField<Simplify<ScaffoldDocumentDataSocialsItem>>;
+
+  /**
+   * Company field in *Scaffold*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.company[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  company: prismic.GroupField<Simplify<ScaffoldDocumentDataCompanyItem>>;
+
+  /**
+   * Quick Links field in *Scaffold*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.quick_links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  quick_links: prismic.GroupField<Simplify<ScaffoldDocumentDataQuickLinksItem>>;
+
+  /**
+   * Footer field in *Scaffold*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: scaffold.footer[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  footer: prismic.GroupField<Simplify<ScaffoldDocumentDataFooterItem>>;
+}
+
+/**
+ * Scaffold document from Prismic
+ *
+ * - **API ID**: `scaffold`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ScaffoldDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<ScaffoldDocumentData>,
+    "scaffold",
+    Lang
+  >;
+
+export type AllDocumentTypes = PageDocument | ScaffoldDocument;
 
 /**
  * Primary content in *RichText → Default → Primary*
@@ -245,12 +368,16 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
-      FooterDocument,
-      FooterDocumentData,
-      FooterDocumentDataNavigationItem,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
+      ScaffoldDocument,
+      ScaffoldDocumentData,
+      ScaffoldDocumentDataReachUsItem,
+      ScaffoldDocumentDataSocialsItem,
+      ScaffoldDocumentDataCompanyItem,
+      ScaffoldDocumentDataQuickLinksItem,
+      ScaffoldDocumentDataFooterItem,
       AllDocumentTypes,
       RichTextSlice,
       RichTextSliceDefaultPrimary,
