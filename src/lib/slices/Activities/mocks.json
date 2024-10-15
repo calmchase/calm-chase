@@ -1,0 +1,131 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "activities": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "title",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "stood",
+                  "type": "Text"
+                }
+              ],
+              [
+                "hero",
+                {
+                  "origin": {
+                    "id": "main",
+                    "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+                    "width": 4000,
+                    "height": 6000
+                  },
+                  "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+                  "width": 4000,
+                  "height": 6000,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  },
+                  "credits": null,
+                  "alt": null,
+                  "__TYPE__": "ImageContent",
+                  "thumbnails": {
+                    "expanded": {
+                      "origin": {
+                        "id": "expanded",
+                        "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+                        "width": 3277,
+                        "height": 4092
+                      },
+                      "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?rect=0%2C1152%2C3277%2C1787&w=264&h=144",
+                      "width": 264,
+                      "height": 144,
+                      "edit": {
+                        "zoom": 1,
+                        "crop": {
+                          "x": 0,
+                          "y": 1152
+                        },
+                        "background": "transparent"
+                      },
+                      "credits": null,
+                      "alt": null
+                    },
+                    "small": {
+                      "origin": {
+                        "id": "small",
+                        "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+                        "width": 5000,
+                        "height": 4613
+                      },
+                      "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?rect=84%2C0%2C4831%2C4613&w=288&h=275",
+                      "width": 288,
+                      "height": 275,
+                      "edit": {
+                        "zoom": 1,
+                        "crop": {
+                          "x": 84,
+                          "y": 0
+                        },
+                        "background": "transparent"
+                      },
+                      "credits": null,
+                      "alt": null
+                    },
+                    "square": {
+                      "origin": {
+                        "id": "square",
+                        "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+                        "width": 4000,
+                        "height": 4000
+                      },
+                      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?rect=0%2C0%2C4000%2C4000&w=244&h=244",
+                      "width": 244,
+                      "height": 244,
+                      "edit": {
+                        "zoom": 1,
+                        "crop": {
+                          "x": 0,
+                          "y": 0
+                        },
+                        "background": "transparent"
+                      },
+                      "credits": null,
+                      "alt": null
+                    }
+                  }
+                }
+              ],
+              [
+                "content",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Commodo ex consectetur anim et consectetur et est. Incididunt ex eiusmod ullamco id aliqua irure eiusmod veniam irure sit aliqua fugiat. Elit eu sint consequat ullamco sint incididunt est officia consectetur occaecat dolore aute."
+                      }
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "items": []
+  }
+]

@@ -38,7 +38,7 @@
     <meta name="twitter:card" content="summary_large_image" />
   {/if}
 </svelte:head>
-<main class="bg-black font-int">
+<main class="bg-white font-int">
   <slot />
   <Footer scaffold="{data.scaffold}" />
 </main>

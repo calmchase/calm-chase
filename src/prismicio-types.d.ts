@@ -4,7 +4,10 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = HeaderSlice;
+type PageDocumentDataSlicesSlice =
+  | ActivitiesSlice
+  | ProgramsSlice
+  | HeaderSlice;
 
 /**
  * Content for Page documents
@@ -292,6 +295,88 @@ export type ScaffoldDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument | ScaffoldDocument;
 
 /**
+ * Item in *Activities → Default → Primary → Activities*
+ */
+export interface ActivitiesSliceDefaultPrimaryActivitiesItem {
+  /**
+   * Title field in *Activities → Default → Primary → Activities*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: activities.default.primary.activities[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Hero field in *Activities → Default → Primary → Activities*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: activities.default.primary.activities[].hero
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  hero: prismic.ImageField<"expanded" | "small" | "square">;
+
+  /**
+   * content field in *Activities → Default → Primary → Activities*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: activities.default.primary.activities[].content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Activities → Default → Primary*
+ */
+export interface ActivitiesSliceDefaultPrimary {
+  /**
+   * Activities field in *Activities → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: activities.default.primary.activities[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  activities: prismic.GroupField<
+    Simplify<ActivitiesSliceDefaultPrimaryActivitiesItem>
+  >;
+}
+
+/**
+ * Default variation for Activities Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ActivitiesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ActivitiesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Activities*
+ */
+type ActivitiesSliceVariation = ActivitiesSliceDefault;
+
+/**
+ * Activities Shared Slice
+ *
+ * - **API ID**: `activities`
+ * - **Description**: Activities
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ActivitiesSlice = prismic.SharedSlice<
+  "activities",
+  ActivitiesSliceVariation
+>;
+
+/**
  * Item in *Header → Default → Primary → Nav*
  */
 export interface HeaderSliceDefaultPrimaryNavItem {
@@ -473,6 +558,11 @@ declare module "@prismicio/client" {
       ScaffoldDocumentDataQuickLinksItem,
       ScaffoldDocumentDataFooterItem,
       AllDocumentTypes,
+      ActivitiesSlice,
+      ActivitiesSliceDefaultPrimaryActivitiesItem,
+      ActivitiesSliceDefaultPrimary,
+      ActivitiesSliceVariation,
+      ActivitiesSliceDefault,
       HeaderSlice,
       HeaderSliceDefaultPrimaryNavItem,
       HeaderSliceDefaultPrimary,

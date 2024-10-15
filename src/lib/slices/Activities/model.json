@@ -1,0 +1,68 @@
+{
+  "id": "activities",
+  "type": "SharedSlice",
+  "name": "Activities",
+  "description": "Activities",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "activities": {
+          "type": "Group",
+          "config": {
+            "label": "Activities",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "hero": {
+                "type": "Image",
+                "config": {
+                  "label": "Hero",
+                  "constraint": {},
+                  "thumbnails": [
+                    {
+                      "name": "expanded",
+                      "width": 264,
+                      "height": 144
+                    },
+                    {
+                      "name": "small",
+                      "width": 288,
+                      "height": 275
+                    },
+                    {
+                      "name": "square",
+                      "width": 244,
+                      "height": 244
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "content",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

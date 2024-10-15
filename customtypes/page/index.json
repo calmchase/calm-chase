@@ -18,6 +18,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "activities": {
+              "type": "SharedSlice"
+            },
+            "programs": {
+              "type": "SharedSlice"
+            },
             "header": {
               "type": "SharedSlice"
             }
