@@ -4,23 +4,12 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = RichTextSlice;
+type PageDocumentDataSlicesSlice = HeaderSlice;
 
 /**
  * Content for Page documents
  */
 interface PageDocumentData {
-  /**
-   * Title field in *Page*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.TitleField;
-
   /**
    * Slice Zone field in *Page*
    *
@@ -303,49 +292,82 @@ export type ScaffoldDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument | ScaffoldDocument;
 
 /**
- * Primary content in *RichText → Default → Primary*
+ * Item in *Header → Default → Primary → Nav*
  */
-export interface RichTextSliceDefaultPrimary {
+export interface HeaderSliceDefaultPrimaryNavItem {
   /**
-   * Content field in *RichText → Default → Primary*
+   * Link field in *Header → Default → Primary → Nav*
    *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Lorem ipsum...
-   * - **API ID Path**: rich_text.default.primary.content
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.nav[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  content: prismic.RichTextField;
+  link: prismic.LinkField;
+
+  /**
+   * CTA field in *Header → Default → Primary → Nav*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: header.default.primary.nav[].cta
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  cta: prismic.BooleanField;
 }
 
 /**
- * Default variation for RichText Slice
+ * Primary content in *Header → Default → Primary*
+ */
+export interface HeaderSliceDefaultPrimary {
+  /**
+   * Nav field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.nav[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  nav: prismic.GroupField<Simplify<HeaderSliceDefaultPrimaryNavItem>>;
+
+  /**
+   * Title field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Header Slice
  *
  * - **API ID**: `default`
- * - **Description**: RichText
+ * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type RichTextSliceDefault = prismic.SharedSliceVariation<
+export type HeaderSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Simplify<RichTextSliceDefaultPrimary>,
+  Simplify<HeaderSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Slice variation for *RichText*
+ * Slice variation for *Header*
  */
-type RichTextSliceVariation = RichTextSliceDefault;
+type HeaderSliceVariation = HeaderSliceDefault;
 
 /**
- * RichText Shared Slice
+ * Header Shared Slice
  *
- * - **API ID**: `rich_text`
- * - **Description**: RichText
+ * - **API ID**: `header`
+ * - **Description**: Header
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type RichTextSlice = prismic.SharedSlice<
-  "rich_text",
-  RichTextSliceVariation
->;
+export type HeaderSlice = prismic.SharedSlice<"header", HeaderSliceVariation>;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -379,10 +401,11 @@ declare module "@prismicio/client" {
       ScaffoldDocumentDataQuickLinksItem,
       ScaffoldDocumentDataFooterItem,
       AllDocumentTypes,
-      RichTextSlice,
-      RichTextSliceDefaultPrimary,
-      RichTextSliceVariation,
-      RichTextSliceDefault,
+      HeaderSlice,
+      HeaderSliceDefaultPrimaryNavItem,
+      HeaderSliceDefaultPrimary,
+      HeaderSliceVariation,
+      HeaderSliceDefault,
     };
   }
 }

@@ -8,7 +8,7 @@
 </script>
 
 <footer class="bg-blue1">
-  <section class="mx-auto w-full max-w-7xl px-4 pt-9">
+  <nav aria-label="Footer" class="mx-auto w-full max-w-7xl px-4 pt-9">
     <div class="mb-6 h-5 w-18 md:mb-15 md:h-13 md:w-44"><Fulllogo /></div>
     <hr class="" />
     <div class="flex flex-col gap-8 md:flex-row md:justify-between">
@@ -77,5 +77,5 @@
         {/each}
       </ul>
     </div>
-  </section>
+  </nav>
 </footer>
