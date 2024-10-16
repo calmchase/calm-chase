@@ -25,28 +25,12 @@
                   "placeholder": ""
                 }
               },
-              "hero": {
+              "square": {
                 "type": "Image",
                 "config": {
-                  "label": "Hero",
+                  "label": "Square",
                   "constraint": {},
-                  "thumbnails": [
-                    {
-                      "name": "expanded",
-                      "width": 264,
-                      "height": 144
-                    },
-                    {
-                      "name": "small",
-                      "width": 288,
-                      "height": 275
-                    },
-                    {
-                      "name": "square",
-                      "width": 244,
-                      "height": 244
-                    }
-                  ]
+                  "thumbnails": []
                 }
               },
               "content": {
@@ -56,6 +40,14 @@
                   "placeholder": "",
                   "allowTargetBlank": true,
                   "multi": "paragraph,preformatted,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item"
+                }
+              },
+              "wide": {
+                "type": "Image",
+                "config": {
+                  "label": "Wide",
+                  "constraint": {},
+                  "thumbnails": []
                 }
               }
             }

@@ -82,6 +82,7 @@ export default {
         38: "152px",
         46: "184px",
         50: "200px",
+        65: "265px",
       },
       screens: {
         sm: "430px",
@@ -94,6 +95,7 @@ export default {
       },
       fontSize: {
         head: "14px",
+        "1.5xl": "22px",
         "3.5xl": "32px",
         "4.5xl": "40px",
         "5.5xl": "56px",

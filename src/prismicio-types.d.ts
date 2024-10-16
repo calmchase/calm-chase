@@ -309,14 +309,14 @@ export interface ActivitiesSliceDefaultPrimaryActivitiesItem {
   title: prismic.KeyTextField;
 
   /**
-   * Hero field in *Activities → Default → Primary → Activities*
+   * Square field in *Activities → Default → Primary → Activities*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: activities.default.primary.activities[].hero
+   * - **API ID Path**: activities.default.primary.activities[].square
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  hero: prismic.ImageField<"expanded" | "small" | "square">;
+  square: prismic.ImageField<never>;
 
   /**
    * content field in *Activities → Default → Primary → Activities*
@@ -327,6 +327,16 @@ export interface ActivitiesSliceDefaultPrimaryActivitiesItem {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   content: prismic.RichTextField;
+
+  /**
+   * Wide field in *Activities → Default → Primary → Activities*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: activities.default.primary.activities[].wide
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  wide: prismic.ImageField<never>;
 }
 
 /**
