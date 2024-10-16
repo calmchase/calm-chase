@@ -26,7 +26,7 @@
   {/each}
   <!-- eslint-disable-next-line svelte/no-at-html-tags -->
   {@html webManifestLink}
-  <title>{$page.data.title}</title>
+  <title>{$page.data.meta_title}</title>
   {#if $page.data.meta_description}
     <meta name="description" content="{$page.data.meta_description}" />
   {/if}
