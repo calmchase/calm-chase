@@ -18,6 +18,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "card": {
+              "type": "SharedSlice"
+            },
             "activities": {
               "type": "SharedSlice"
             },

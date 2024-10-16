@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | CardSlice
   | ActivitiesSlice
   | ProgramsSlice
   | HeaderSlice;
@@ -387,6 +388,78 @@ export type ActivitiesSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Card → Default → Primary*
+ */
+export interface CardSliceDefaultPrimary {
+  /**
+   * Hero field in *Card → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.default.primary.hero
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  hero: prismic.ImageField<never>;
+
+  /**
+   * Title field in *Card → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *Card → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * CTA field in *Card → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: card.default.primary.cta
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta: prismic.LinkField;
+}
+
+/**
+ * Default variation for Card Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CardSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CardSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Card*
+ */
+type CardSliceVariation = CardSliceDefault;
+
+/**
+ * Card Shared Slice
+ *
+ * - **API ID**: `card`
+ * - **Description**: Card
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CardSlice = prismic.SharedSlice<"card", CardSliceVariation>;
+
+/**
  * Item in *Header → Default → Primary → Nav*
  */
 export interface HeaderSliceDefaultPrimaryNavItem {
@@ -573,6 +646,10 @@ declare module "@prismicio/client" {
       ActivitiesSliceDefaultPrimary,
       ActivitiesSliceVariation,
       ActivitiesSliceDefault,
+      CardSlice,
+      CardSliceDefaultPrimary,
+      CardSliceVariation,
+      CardSliceDefault,
       HeaderSlice,
       HeaderSliceDefaultPrimaryNavItem,
       HeaderSliceDefaultPrimary,

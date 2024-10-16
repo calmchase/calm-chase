@@ -39,7 +39,7 @@
         <li>
           <PrismicLink
             field="{element.link}"
-            class="rounded-full bg-blue1 p-5 font-int text-base font-semibold text-white1">
+            class="rounded-full bg-blue1 p-5 font-int text-base font-semibold text-white1 hover:bg-yellow1 hover:text-blue1 active:bg-yellow1 active:text-blue1">
             {element.link.text}
           </PrismicLink>
         </li>
@@ -83,7 +83,7 @@
               <li>
                 <PrismicLink
                   field="{element.link}"
-                  class="rounded-full bg-yellow1 px-8 py-2 font-int text-base font-semibold text-white1">
+                  class="rounded-full bg-yellow1 px-8 py-2 font-int text-base font-semibold text-white1 hover:bg-blue1 hover:text-yellow1 active:bg-blue1 active:text-yellow1  ">
                   {element.link.text}
                 </PrismicLink>
               </li>
@@ -100,7 +100,7 @@
   {#if link}
     <PrismicLink
       field="{link}"
-      class="mb-5 rounded-full bg-blue1 px-8 py-2 font-int text-base font-semibold text-white1 md:hidden">
+      class="mb-5 rounded-full bg-blue1 px-8 py-2 font-int text-base font-semibold text-white1 hover:bg-yellow1  hover:text-blue1 active:bg-yellow1  active:text-blue1 md:hidden">
       {link.text}
     </PrismicLink>
   {/if}
