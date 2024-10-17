@@ -11,7 +11,6 @@
   import "highlight.js/styles/github-dark.css";
   import CiMenuAlt01 from "~icons/ci/menu-alt-01";
   import X from "~icons/lucide/x";
-  import "../app.css";
 
   export let scaffold: Content.ScaffoldDocument;
 </script>
