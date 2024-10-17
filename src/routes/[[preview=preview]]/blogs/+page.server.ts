@@ -3,7 +3,7 @@ import { createClient } from "$lib/prismicio";
 export async function load({ fetch, cookies }) {
   const client = createClient({ fetch, cookies });
 
-  const page = await client.getSingle("about");
+  const page = await client.getByUID("listings", "blogs");
   console.log(JSON.stringify(page, null, 2));
   return {
     page,
