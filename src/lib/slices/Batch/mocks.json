@@ -1,0 +1,61 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "batchdetails": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "activity",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "scientist",
+                  "type": "Text"
+                }
+              ],
+              [
+                "description",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "could",
+                  "type": "Text"
+                }
+              ],
+              [
+                "frequency",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "remember",
+                  "type": "Text"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "more",
+        "type": "Text"
+      },
+      "fees": {
+        "__TYPE__": "FieldContent",
+        "value": "service",
+        "type": "Text"
+      },
+      "cta": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io",
+          "text": "lose"
+        }
+      }
+    },
+    "items": []
+  }
+]

@@ -3,6 +3,7 @@
   import Sonner from "$lib/components/ui/sonner/sonner.svelte";
   import { repositoryName } from "$lib/prismicio";
   import Footer from "@/components/Footer.svelte";
+  import Header from "@/components/Header.svelte";
   import "@fontsource-variable/inter";
   import "@fontsource-variable/manrope";
   import "@fontsource-variable/schibsted-grotesk";
@@ -39,6 +40,9 @@
   {/if}
 </svelte:head>
 <main class="bg-white font-int">
+  {#if $page.data.showHeader}
+    <Header scaffold="{data.scaffold}" />
+  {/if}
   <slot />
   <Footer scaffold="{data.scaffold}" />
 </main>

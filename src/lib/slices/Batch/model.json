@@ -1,0 +1,73 @@
+{
+  "id": "batch",
+  "type": "SharedSlice",
+  "name": "Batch",
+  "description": "Batch",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "batchdetails": {
+          "type": "Group",
+          "config": {
+            "label": "BatchDetails",
+            "repeat": true,
+            "fields": {
+              "activity": {
+                "type": "Text",
+                "config": {
+                  "label": "Activity",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              },
+              "frequency": {
+                "type": "Text",
+                "config": {
+                  "label": "Frequency",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "fees": {
+          "type": "Text",
+          "config": {
+            "label": "Fees",
+            "placeholder": ""
+          }
+        },
+        "cta": {
+          "type": "Link",
+          "config": {
+            "label": "CTA",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

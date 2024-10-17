@@ -1,7 +1,7 @@
 {
-  "id": "page",
-  "label": "Home",
   "format": "page",
+  "id": "listings",
+  "label": "Listings",
   "repeatable": true,
   "status": true,
   "json": {
@@ -9,7 +9,20 @@
       "uid": {
         "type": "UID",
         "config": {
-          "label": "UID",
+          "label": "UID"
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "subtitle": {
+        "type": "Text",
+        "config": {
+          "label": "Subtitle",
           "placeholder": ""
         }
       },
@@ -19,7 +32,7 @@
           "label": "ShowHeader",
           "placeholder_false": "false",
           "placeholder_true": "true",
-          "default_value": false
+          "default_value": true
         }
       },
       "slices": {
@@ -27,19 +40,13 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "hero": {
+            "testimonials": {
               "type": "SharedSlice"
             },
-            "card": {
+            "blogs": {
               "type": "SharedSlice"
             },
-            "activities": {
-              "type": "SharedSlice"
-            },
-            "programs": {
-              "type": "SharedSlice"
-            },
-            "header": {
+            "batch": {
               "type": "SharedSlice"
             }
           }
@@ -48,29 +55,29 @@
     },
     "SEO & Metadata": {
       "meta_title": {
-        "type": "Text",
         "config": {
           "label": "Meta Title",
           "placeholder": "A title of the page used for social media and search engines"
-        }
+        },
+        "type": "Text"
       },
       "meta_description": {
-        "type": "Text",
         "config": {
           "label": "Meta Description",
           "placeholder": "A brief summary of the page"
-        }
+        },
+        "type": "Text"
       },
       "meta_image": {
-        "type": "Image",
         "config": {
-          "label": "Meta Image",
           "constraint": {
-            "width": 2400,
-            "height": 1260
+            "height": 1260,
+            "width": 2400
           },
+          "label": "Meta Image",
           "thumbnails": []
-        }
+        },
+        "type": "Image"
       }
     }
   }
