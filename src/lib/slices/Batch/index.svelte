@@ -12,8 +12,7 @@
   data-slice-variation="{slice.variation}"
   class=" mx-auto my-5 max-w-7xl px-2 md:my-11">
   <Card.Root class="px-3 pt-5 md:px-15 md:pt-9">
-    <Card.Header
-      class="flex flex-col p-0 md:flex-row md:items-center md:justify-between">
+    <Card.Header class="flex  flex-row items-center  justify-between  p-0">
       <div>
         <Card.Title>{slice.primary.title}</Card.Title>
         <Card.Description>{slice.primary.fees}</Card.Description>
@@ -21,7 +20,7 @@
 
       <PrismicLink
         field="{slice.primary.cta}"
-        class="  rounded-full bg-blue1 py-2 text-center font-int text-base font-semibold text-white1 hover:bg-yellow1 hover:text-blue1 active:bg-yellow1 active:text-blue1  md:px-12 md:py-5">
+        class="  rounded-full bg-blue1 px-5   py-3 text-center font-int text-xs font-semibold text-white1 hover:bg-yellow1 hover:text-blue1 active:bg-yellow1 active:text-blue1 md:px-12 md:py-5 md:text-base">
         {slice.primary.cta.text}
       </PrismicLink>
     </Card.Header>
