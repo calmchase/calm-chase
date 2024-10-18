@@ -293,6 +293,9 @@ export type ContactDocument<Lang extends string = string> =
   >;
 
 type HomeDocumentDataSlicesSlice =
+  | TeamSlice
+  | PrideSlice
+  | CarouselSlice
   | HeroSlice
   | CardSlice
   | ActivitiesSlice
@@ -1089,6 +1092,66 @@ type CardSliceVariation = CardSliceDefault;
 export type CardSlice = prismic.SharedSlice<"card", CardSliceVariation>;
 
 /**
+ * Item in *Carousel → Default → Primary → Images*
+ */
+export interface CarouselSliceDefaultPrimaryImagesItem {
+  /**
+   * Image field in *Carousel → Default → Primary → Images*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: carousel.default.primary.images[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *Carousel → Default → Primary*
+ */
+export interface CarouselSliceDefaultPrimary {
+  /**
+   * Images field in *Carousel → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: carousel.default.primary.images[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  images: prismic.GroupField<Simplify<CarouselSliceDefaultPrimaryImagesItem>>;
+}
+
+/**
+ * Default variation for Carousel Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CarouselSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CarouselSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Carousel*
+ */
+type CarouselSliceVariation = CarouselSliceDefault;
+
+/**
+ * Carousel Shared Slice
+ *
+ * - **API ID**: `carousel`
+ * - **Description**: Carousel
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CarouselSlice = prismic.SharedSlice<
+  "carousel",
+  CarouselSliceVariation
+>;
+
+/**
  * Item in *Header → Default → Primary → Nav*
  */
 export interface HeaderSliceDefaultPrimaryNavItem {
@@ -1239,6 +1302,83 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Item in *Pride → Default → Primary → Cards*
+ */
+export interface PrideSliceDefaultPrimaryCardsItem {
+  /**
+   * Hero field in *Pride → Default → Primary → Cards*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pride.default.primary.cards[].hero
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  hero: prismic.ImageField<never>;
+
+  /**
+   * Name field in *Pride → Default → Primary → Cards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pride.default.primary.cards[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Description field in *Pride → Default → Primary → Cards*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pride.default.primary.cards[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Pride → Default → Primary*
+ */
+export interface PrideSliceDefaultPrimary {
+  /**
+   * Cards field in *Pride → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pride.default.primary.cards[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  cards: prismic.GroupField<Simplify<PrideSliceDefaultPrimaryCardsItem>>;
+}
+
+/**
+ * Default variation for Pride Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PrideSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PrideSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Pride*
+ */
+type PrideSliceVariation = PrideSliceDefault;
+
+/**
+ * Pride Shared Slice
+ *
+ * - **API ID**: `pride`
+ * - **Description**: Pride
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PrideSlice = prismic.SharedSlice<"pride", PrideSliceVariation>;
+
+/**
  * Item in *Programs → Default → Primary → Programs*
  */
 export interface ProgramsSliceDefaultPrimaryProgramsItem {
@@ -1309,6 +1449,93 @@ export type ProgramsSlice = prismic.SharedSlice<
   "programs",
   ProgramsSliceVariation
 >;
+
+/**
+ * Item in *Team → Default → Primary → Members*
+ */
+export interface TeamSliceDefaultPrimaryTitleItem {
+  /**
+   * Title field in *Team → Default → Primary → Members*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.title[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Name field in *Team → Default → Primary → Members*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.title[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Description field in *Team → Default → Primary → Members*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.title[].description
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Hero field in *Team → Default → Primary → Members*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.title[].hero
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  hero: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *Team → Default → Primary*
+ */
+export interface TeamSliceDefaultPrimary {
+  /**
+   * Members field in *Team → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.title[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  title: prismic.GroupField<Simplify<TeamSliceDefaultPrimaryTitleItem>>;
+}
+
+/**
+ * Default variation for Team Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TeamSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TeamSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Team*
+ */
+type TeamSliceVariation = TeamSliceDefault;
+
+/**
+ * Team Shared Slice
+ *
+ * - **API ID**: `team`
+ * - **Description**: Team
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TeamSlice = prismic.SharedSlice<"team", TeamSliceVariation>;
 
 /**
  * Primary content in *Testimonials → Default → Primary*
@@ -1440,6 +1667,11 @@ declare module "@prismicio/client" {
       CardSliceDefaultPrimary,
       CardSliceVariation,
       CardSliceDefault,
+      CarouselSlice,
+      CarouselSliceDefaultPrimaryImagesItem,
+      CarouselSliceDefaultPrimary,
+      CarouselSliceVariation,
+      CarouselSliceDefault,
       HeaderSlice,
       HeaderSliceDefaultPrimaryNavItem,
       HeaderSliceDefaultPrimary,
@@ -1449,11 +1681,21 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      PrideSlice,
+      PrideSliceDefaultPrimaryCardsItem,
+      PrideSliceDefaultPrimary,
+      PrideSliceVariation,
+      PrideSliceDefault,
       ProgramsSlice,
       ProgramsSliceDefaultPrimaryProgramsItem,
       ProgramsSliceDefaultPrimary,
       ProgramsSliceVariation,
       ProgramsSliceDefault,
+      TeamSlice,
+      TeamSliceDefaultPrimaryTitleItem,
+      TeamSliceDefaultPrimary,
+      TeamSliceVariation,
+      TeamSliceDefault,
       TestimonialsSlice,
       TestimonialsSliceDefaultPrimary,
       TestimonialsSliceVariation,
