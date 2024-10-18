@@ -15,7 +15,7 @@
 <section
   data-slice-type="{slice.slice_type}"
   data-slice-variation="{slice.variation}"
-  class="flex flex-col items-center justify-center bg-[url('$lib/asset/bg.webp')] bg-cover bg-center bg-no-repeat text-white">
+  class="flex flex-col items-center justify-center bg-[url('/bg.webp')] bg-cover bg-center bg-no-repeat text-white">
   <header
     aria-label="Header"
     class="mx-auto mt-4 flex w-full max-w-7xl flex-row items-center justify-between px-5 md:mt-10">

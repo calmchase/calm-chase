@@ -97,6 +97,7 @@ export default {
       fontSize: {
         head: "14px",
         "1.5xl": "22px",
+        "2.5xl": "28px",
         "3.5xl": "32px",
         "4.5xl": "40px",
         "5.5xl": "56px",

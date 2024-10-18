@@ -2,7 +2,6 @@ import { type ClassValue, clsx } from "clsx";
 import { cubicOut } from "svelte/easing";
 import type { TransitionConfig } from "svelte/transition";
 import { twMerge } from "tailwind-merge";
-import { z } from "zod";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -75,203 +74,17 @@ export function ordinal(n: number) {
   );
 }
 
-export const formSchema = z.object({
-  username: z.string().min(2).max(50),
-});
-
-export type FormSchema = typeof formSchema;
-
-export interface Address {
-  suggestions: Suggestions[];
+export function formatPhoneNumber(phoneNumber: string) {
+  const cleaned = ("" + phoneNumber).replace(/\D/g, "").substring(0, 10);
+  const areaCode = cleaned.substring(0, 3);
+  const middle = cleaned.substring(3, 6);
+  const last = cleaned.substring(6, 10);
+  if (cleaned.length > 6) {
+    return `(${areaCode}) ${middle}-${last}`;
+  } else if (cleaned.length > 3) {
+    return `(${areaCode}) ${middle}`;
+  } else if (cleaned.length > 0) {
+    return `(${areaCode}`;
+  }
+  return "";
 }
-
-export interface Suggestions {
-  placePrediction: {
-    place: string;
-    types: string[];
-    placeId: string;
-    text: {
-      text: string;
-      matches: { endOffset: number }[];
-    };
-    structuredFormat: {
-      mainText: {
-        text: string;
-        matches: { endOffset: number }[];
-      };
-      secondaryText: { text: string };
-    };
-  };
-}
-
-export interface GoogleAddress {
-  addressComponents: {
-    languageCode: string;
-    longText: string;
-    shortText: string;
-    types: string[];
-  }[];
-  shortFormattedAddress: string;
-}
-
-export const questions = [
-  {
-    id: 1,
-    question: "Vehicle Maker",
-    options: [
-      "ACURA",
-      "ALFA ROMEO",
-      "ASTON MARTIN",
-      "AUDI",
-      "BENTLEY",
-      "BMW",
-      "BUICK",
-      "CADILLAC",
-      "CHEVROLET",
-      "CHRYSLER",
-      "DODGE",
-      "FIAT",
-      "FISKER",
-      "FORD",
-      "GENESIS",
-      "GEO",
-      "GMC",
-      "HONDA",
-      "HUMMER",
-      "HYUNDAI",
-      "INFINITI",
-      "ISUZU",
-      "JAGUAR",
-      "JEEP",
-      "KIA",
-      "LANDROVER",
-      "LEXUS",
-      "LINCOLN",
-      "LOTUS",
-      "LUCID MOTORS",
-      "MAHINDRA",
-      "MASERATI",
-      "MAZDA",
-      "MERCEDES",
-      "MERCURY",
-      "MINI",
-      "MITSUBISHI",
-      "NISSAN",
-      "OLDSMOBILE",
-      "PEUGEOT",
-      "PLYMOUTH",
-      "POLESTAR",
-      "PONTIAC",
-      "PORSCHE",
-      "RAM",
-      "RANGE ROVER",
-      "RIVIAN",
-      "ROLLS ROYCE",
-      "SAAB",
-      "SATURN",
-      "SKODA",
-      "SMART",
-      "SPRINTER",
-      "SUBARU",
-      "SUZUKI",
-      "TESLA",
-      "TATA",
-      "TOYOTA",
-      "VOLKSWAGEN",
-      "VOLVO",
-    ],
-  },
-  {
-    id: 2,
-    question: "Vehicle Year",
-    options: [],
-  },
-  {
-    id: 3,
-    question: "Vehicle Model",
-    options: [],
-  },
-  {
-    id: 4,
-    question: "Vehicle Trim",
-    options: [],
-  },
-  {
-    id: 5,
-    question: "Do You Own This Vehicle?",
-    options: ["YES", "NO"],
-  },
-  {
-    id: 6,
-    question: "Save an Additional 20% by Adding another Vehicle",
-    options: ["ADD ANOTHER VEHICLE", "NO, THANKS"],
-  },
-  {
-    id: 7,
-    question: "Are you currently insured?",
-    options: ["YES", "NO"],
-  },
-  {
-    id: 8,
-    question: "Current Insurance Company",
-    options: [
-      "AAA INSURANCE CO",
-      "ALLSTATE INSURANCE",
-      "FARM BUREAU/FARM FAMILY/RURAL",
-      "FARMERS INSURANCE",
-      "GEICO",
-      "HART ACCIDENT AND INDEMNITY",
-      "NATIONWIDE GENERAL INSURANCE",
-      "PROGRESSIVE",
-      "SAFECO",
-      "STATE FARM COUNTY",
-      "USAA",
-      "OTHER",
-    ],
-  },
-  {
-    id: 9,
-    question: "GENDER",
-    options: ["FEMALE", "MALE"],
-  },
-  {
-    id: 10,
-    question: "DATE OF BIRTH",
-    options: [],
-  },
-  {
-    id: 11,
-    question: "Are you currently married?",
-    options: ["YES", "NO"],
-  },
-  {
-    id: 12,
-    question: "Incidents In The Past 3 Years",
-    options: ["Had an accident", "Received a ticket", "Received a DUI"],
-  },
-  {
-    id: 13,
-    question: "Name",
-    options: [],
-  },
-  {
-    id: 14,
-    question: "Add another driver? (Save Additional 20%)",
-    options: ["ADD ANOTHER DRIVER", "NO, THANKS"],
-  },
-  {
-    id: 15,
-    question: "Address",
-    options: [],
-  },
-  {
-    id: 16,
-    question: "Home Ownership",
-    options: ["RENT", "OWN", "OTHER"],
-  },
-  {
-    id: 17,
-    question: "Contact information",
-    options: [],
-  },
-];

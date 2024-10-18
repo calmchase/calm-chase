@@ -34,14 +34,14 @@ export default defineConfig({
         lang: "en",
         scope: "/",
         start_url: "/",
-        name: "AutoQuoteGuide 1",
+        name: "Calm Chase",
         orientation: "any",
         display: "standalone",
         theme_color: "#ffffff",
-        short_name: "AutoQuoteGuide",
+        short_name: "Calm-chase",
         background_color: "#ffffff",
-        categories: ["lead", "insurance", "utilities"],
-        description: "Empowering Your Lead Generation",
+        categories: ["calm", "leadership", "personality"],
+        description: "Chase your dreams with calmness",
         icons: [
           {
             src: "/pwa-64x64.png",
@@ -76,10 +76,10 @@ export default defineConfig({
             ],
           },
           {
-            name: "Request Quote",
-            short_name: "Quote",
-            url: "/quote?source=pwa",
-            description: "Request free quote",
+            name: "Batch Details",
+            short_name: "Batch",
+            url: "/batch-details?source=pwa",
+            description: "Request a callback",
             icons: [
               { src: "/pwa-192x192.png", type: "image/png", sizes: "192x192" },
             ],

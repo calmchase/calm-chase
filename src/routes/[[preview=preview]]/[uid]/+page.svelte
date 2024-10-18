@@ -13,5 +13,6 @@
 {#if data.page.data.subtitle}<h6
     class="mt-4 text-center font-int text-xl font-semibold text-blue1 md:mt-11 md:text-4.5xl">
     {data.page.data.subtitle}
-  </h6>{/if}
+  </h6>
+{/if}
 <SliceZone slices="{data.page.data.slices}" {components} />

@@ -59,6 +59,9 @@ importers:
       highlight.js:
         specifier: 11.10.0
         version: 11.10.0
+      libphonenumber-js:
+        specifier: ^1.11.12
+        version: 1.11.12
       lucide-svelte:
         specifier: ^0.452.0
         version: 0.452.0(svelte@4.2.19)
@@ -3732,8 +3735,8 @@ packages:
   libphonenumber-js@1.10.43:
     resolution: {integrity: sha512-M/iPACJGsTvEy8QmUY4K0SoIFB71X2j7y2JvUMYzUXUxCNmiU+NTfHdz7gt+dC48BVfBzZi2oO6s9TDGllCfxA==}
 
-  libphonenumber-js@1.11.11:
-    resolution: {integrity: sha512-mF3KaORjJQR6JBNcOkluDcJKhtoQT4VTLRMrX1v/wlBayL4M8ybwEDeryyPcrSEJmD0rVwHUbBarpZwN5NfPFQ==}
+  libphonenumber-js@1.11.12:
+    resolution: {integrity: sha512-QkJn9/D7zZ1ucvT++TQSvZuSA2xAWeUytU+DiEQwbPKLyrDpvbul2AFs1CGbRAPpSCCk47aRAb5DX5mmcayp4g==}
 
   lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
@@ -7624,7 +7627,7 @@ snapshots:
   class-validator@0.14.1:
     dependencies:
       '@types/validator': 13.12.2
-      libphonenumber-js: 1.11.11
+      libphonenumber-js: 1.11.12
       validator: 13.12.0
     optional: true
 
@@ -8929,8 +8932,7 @@ snapshots:
 
   libphonenumber-js@1.10.43: {}
 
-  libphonenumber-js@1.11.11:
-    optional: true
+  libphonenumber-js@1.11.12: {}
 
   lilconfig@2.1.0: {}
 

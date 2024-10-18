@@ -21,6 +21,7 @@ const routes: prismic.ClientConfig["routes"] = [
   { type: "home", path: "/" },
   { type: "page", path: "/:uid" },
   { type: "about", path: "/about" },
+  { type: "contact", path: "/contact" },
 ];
 
 /**

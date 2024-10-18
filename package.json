@@ -29,11 +29,11 @@
   },
   "bugs": {
     "email": "root@AutoQuoteGuide.com",
-    "url": "https://github.com/AutoQuoteGuide/lead1/issues"
+    "url": "https://github.com/RajeshPandey057/calm-chase/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org/AutoQuoteGuide/lead1.git"
+    "url": "git@bitbucket.org/RajeshPandey057/calm-chase.git"
   },
   "scripts": {
     "dev": "concurrently \"pnpm:vite:dev\" \"pnpm:slicemachine\" --prefix-colors blue,magenta",
@@ -127,6 +127,7 @@
     "embla-carousel-svelte": "^8.3.0",
     "formsnap": "^1.0.1",
     "highlight.js": "11.10.0",
+    "libphonenumber-js": "^1.11.12",
     "lucide-svelte": "^0.452.0",
     "mode-watcher": "^0.4.1",
     "paneforge": "^0.0.6",
