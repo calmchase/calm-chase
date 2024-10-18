@@ -1,6 +1,6 @@
 {
   "id": "page",
-  "label": "Home",
+  "label": "Page",
   "format": "page",
   "repeatable": true,
   "status": true,
@@ -13,13 +13,27 @@
           "placeholder": ""
         }
       },
-      "showheader": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "hideHeader": {
         "type": "Boolean",
         "config": {
-          "label": "ShowHeader",
+          "label": "HideHeader",
           "placeholder_false": "false",
           "placeholder_true": "true",
           "default_value": false
+        }
+      },
+      "subtitle": {
+        "type": "Text",
+        "config": {
+          "label": "Subtitle",
+          "placeholder": ""
         }
       },
       "slices": {
@@ -27,6 +41,15 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "testimonials": {
+              "type": "SharedSlice"
+            },
+            "blogs": {
+              "type": "SharedSlice"
+            },
+            "batch": {
+              "type": "SharedSlice"
+            },
             "hero": {
               "type": "SharedSlice"
             },

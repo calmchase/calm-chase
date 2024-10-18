@@ -40,7 +40,7 @@
   {/if}
 </svelte:head>
 <main class="bg-white font-int">
-  {#if $page.data.showHeader}
+  {#if !$page.data.hideHeader}
     <Header scaffold="{data.scaffold}" />
   {/if}
   <slot />

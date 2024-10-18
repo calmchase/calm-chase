@@ -61,13 +61,13 @@
           "placeholder": ""
         }
       },
-      "showheader": {
+      "hideHeader": {
         "type": "Boolean",
         "config": {
-          "label": "ShowHeader",
+          "label": "HideHeader",
           "placeholder_false": "false",
           "placeholder_true": "true",
-          "default_value": true
+          "default_value": false
         }
       },
       "slices": {
