@@ -83,6 +83,7 @@ export default {
         46: "184px",
         50: "200px",
         65: "265px",
+        76: "304px",
       },
       screens: {
         sm: "430px",
@@ -99,6 +100,7 @@ export default {
         "3.5xl": "32px",
         "4.5xl": "40px",
         "5.5xl": "56px",
+        "7.5xl": "84px",
       },
       fontFamily: {
         int: ["Inter Variable", ...fontFamily.sans],

@@ -68,11 +68,13 @@
         <ul class="flex flex-col items-start gap-8 p-2">
           {#each scaffold.data.nav.filter((e) => !e.cta) as element (element.link.text)}
             <li>
-              <PrismicLink
-                field="{element.link}"
-                class="font-int text-base font-medium text-white">
-                {element.link.text}
-              </PrismicLink>
+              <Sheet.Close>
+                <PrismicLink
+                  field="{element.link}"
+                  class="font-int text-base font-medium text-white">
+                  {element.link.text}
+                </PrismicLink>
+              </Sheet.Close>
             </li>
           {/each}
         </ul>
@@ -80,11 +82,13 @@
         <ul class="flex flex-col items-start gap-8 pt-8">
           {#each scaffold.data.nav.filter((e) => e.cta) as element (element.link.text)}
             <li>
-              <PrismicLink
-                field="{element.link}"
-                class="rounded-full bg-yellow1 px-8 py-2 font-int text-base font-semibold text-white1 hover:bg-blue1 hover:text-yellow1 active:bg-blue1 active:text-yellow1  ">
-                {element.link.text}
-              </PrismicLink>
+              <Sheet.Close>
+                <PrismicLink
+                  field="{element.link}"
+                  class="rounded-full bg-yellow1 px-8 py-2 font-int text-base font-semibold text-white1 hover:bg-blue1 hover:text-yellow1 active:bg-blue1 active:text-yellow1  ">
+                  {element.link.text}
+                </PrismicLink>
+              </Sheet.Close>
             </li>
           {/each}
         </ul>
