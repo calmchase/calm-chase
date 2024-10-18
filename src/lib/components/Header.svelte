@@ -2,7 +2,6 @@
   import * as Sheet from "$lib/components/ui/sheet/index.ts";
   import { Button } from "@/components/ui/button/index.ts";
   import Favicon from "@/svg/Favicon.svelte";
-  import Fulllogo from "@/svg/Fulllogo.svelte";
   import "@fontsource-variable/inter";
   import "@fontsource-variable/manrope";
   import "@fontsource-variable/schibsted-grotesk";
@@ -20,7 +19,6 @@
   class="mx-auto mt-4 flex w-full max-w-7xl flex-row items-center justify-between px-5 md:mt-10">
   <div class="flex items-center gap-3">
     <div class="h-9 w-9 md:h-15 md:w-15"><Favicon /></div>
-    <div class="h-5 w-18 md:h-10 md:w-32"><Fulllogo /></div>
   </div>
   <ul class="hidden flex-row gap-8 rounded-full bg-white1 px-15 py-5 md:flex">
     {#each scaffold.data.nav.filter((e) => !e.cta) as element (element.link.text)}
