@@ -12,36 +12,67 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "hero": {
-          "type": "Image",
+        "blogs": {
+          "type": "Group",
           "config": {
-            "label": "Hero",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        },
-        "content": {
-          "type": "Text",
-          "config": {
-            "label": "Content",
-            "placeholder": ""
-          }
-        },
-        "link": {
-          "type": "Link",
-          "config": {
-            "label": "Link",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "select": null,
-            "allowText": true
+            "label": "Blogs",
+            "repeat": true,
+            "fields": {
+              "hero": {
+                "type": "Image",
+                "config": {
+                  "label": "Hero",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "tags": {
+                "type": "Text",
+                "config": {
+                  "label": "Tags",
+                  "placeholder": "comma separated tag values"
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "Name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name",
+                  "placeholder": ""
+                }
+              },
+              "pic": {
+                "type": "Image",
+                "config": {
+                  "label": "Pic",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "date": {
+                "type": "Text",
+                "config": {
+                  "label": "Date",
+                  "placeholder": "August 20, 2022"
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              }
+            }
           }
         }
       },

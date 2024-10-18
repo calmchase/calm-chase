@@ -948,48 +948,93 @@ type BatchSliceVariation = BatchSliceDefault;
 export type BatchSlice = prismic.SharedSlice<"batch", BatchSliceVariation>;
 
 /**
- * Primary content in *Blog → Default → Primary*
+ * Item in *Blog → Default → Primary → Blogs*
  */
-export interface BlogsSliceDefaultPrimary {
+export interface BlogsSliceDefaultPrimaryBlogsItem {
   /**
-   * Hero field in *Blog → Default → Primary*
+   * Hero field in *Blog → Default → Primary → Blogs*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.default.primary.hero
+   * - **API ID Path**: blogs.default.primary.blogs[].hero
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   hero: prismic.ImageField<never>;
 
   /**
-   * Title field in *Blog → Default → Primary*
+   * Tags field in *Blog → Default → Primary → Blogs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: comma separated tag values
+   * - **API ID Path**: blogs.default.primary.blogs[].tags
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  tags: prismic.KeyTextField;
+
+  /**
+   * Title field in *Blog → Default → Primary → Blogs*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.default.primary.title
+   * - **API ID Path**: blogs.default.primary.blogs[].title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
 
   /**
-   * Content field in *Blog → Default → Primary*
+   * Name field in *Blog → Default → Primary → Blogs*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.default.primary.content
+   * - **API ID Path**: blogs.default.primary.blogs[].Name
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  content: prismic.KeyTextField;
+  Name: prismic.KeyTextField;
 
   /**
-   * Link field in *Blog → Default → Primary*
+   * Pic field in *Blog → Default → Primary → Blogs*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blogs.default.primary.blogs[].pic
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  pic: prismic.ImageField<never>;
+
+  /**
+   * Date field in *Blog → Default → Primary → Blogs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: August 20, 2022
+   * - **API ID Path**: blogs.default.primary.blogs[].date
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  date: prismic.KeyTextField;
+
+  /**
+   * Link field in *Blog → Default → Primary → Blogs*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.default.primary.link
+   * - **API ID Path**: blogs.default.primary.blogs[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
+}
+
+/**
+ * Primary content in *Blog → Default → Primary*
+ */
+export interface BlogsSliceDefaultPrimary {
+  /**
+   * Blogs field in *Blog → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blogs.default.primary.blogs[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  blogs: prismic.GroupField<Simplify<BlogsSliceDefaultPrimaryBlogsItem>>;
 }
 
 /**
@@ -1660,6 +1705,7 @@ declare module "@prismicio/client" {
       BatchSliceVariation,
       BatchSliceDefault,
       BlogsSlice,
+      BlogsSliceDefaultPrimaryBlogsItem,
       BlogsSliceDefaultPrimary,
       BlogsSliceVariation,
       BlogsSliceDefault,
