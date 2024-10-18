@@ -18,7 +18,7 @@
       <p class="font-int text-sm font-normal text-grey1">
         {slice.primary.testimony}
       </p>
-      <p class="font-int text-base font-bold text-[#293238]">
+      <p class="font-int text-base font-bold text-black1">
         {slice.primary.name}
       </p>
     </Card.Content>
