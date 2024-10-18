@@ -85,6 +85,7 @@ export default {
         65: "265px",
         76: "304px",
         88: "352px",
+        92: "368px",
       },
       screens: {
         sm: "430px",

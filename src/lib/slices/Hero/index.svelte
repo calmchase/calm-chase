@@ -8,7 +8,7 @@
 <section
   data-slice-type="{slice.slice_type}"
   data-slice-variation="{slice.variation}"
-  class="mx-auto w-full max-w-7xl bg-white px-2 text-center">
+  class="mx-auto w-full max-w-7xl bg-white1 px-2 text-center">
   <p
     class="col-span-full mb-4 font-grot text-2xl font-black md:row-span-full md:mb-8 md:text-5xl">
     OUR VISION

@@ -13,7 +13,7 @@
 <section
   data-slice-type="{slice.slice_type}"
   data-slice-variation="{slice.variation}"
-  class="mx-auto w-full max-w-7xl bg-white px-2 py-5 text-start md:py-16">
+  class="mx-auto w-full max-w-7xl bg-white1 px-2 py-5 text-start md:py-16">
   <Card.Root
     class="mx-auto flex w-full  max-w-6xl flex-col items-center gap-6 rounded-sm  bg-blue1  md:flex-row md:py-20 md:pl-22   md:pr-11">
     <Card.Content

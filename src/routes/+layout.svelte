@@ -39,7 +39,7 @@
     <meta name="twitter:card" content="summary_large_image" />
   {/if}
 </svelte:head>
-<main class="bg-white font-int">
+<main class="bg-white1 font-int">
   {#if !$page.data.hideHeader}
     <Header scaffold="{data.scaffold}" />
   {/if}
