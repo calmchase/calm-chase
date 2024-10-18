@@ -1453,13 +1453,13 @@ export type ProgramsSlice = prismic.SharedSlice<
 /**
  * Item in *Team → Default → Primary → Members*
  */
-export interface TeamSliceDefaultPrimaryTitleItem {
+export interface TeamSliceDefaultPrimaryMembersItem {
   /**
    * Title field in *Team → Default → Primary → Members*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.title[].title
+   * - **API ID Path**: team.default.primary.members[].title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
@@ -1469,7 +1469,7 @@ export interface TeamSliceDefaultPrimaryTitleItem {
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.title[].name
+   * - **API ID Path**: team.default.primary.members[].name
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   name: prismic.KeyTextField;
@@ -1479,7 +1479,7 @@ export interface TeamSliceDefaultPrimaryTitleItem {
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.title[].description
+   * - **API ID Path**: team.default.primary.members[].description
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   description: prismic.KeyTextField;
@@ -1489,7 +1489,7 @@ export interface TeamSliceDefaultPrimaryTitleItem {
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.title[].hero
+   * - **API ID Path**: team.default.primary.members[].hero
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   hero: prismic.ImageField<never>;
@@ -1504,10 +1504,10 @@ export interface TeamSliceDefaultPrimary {
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: team.default.primary.title[]
+   * - **API ID Path**: team.default.primary.members[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  title: prismic.GroupField<Simplify<TeamSliceDefaultPrimaryTitleItem>>;
+  members: prismic.GroupField<Simplify<TeamSliceDefaultPrimaryMembersItem>>;
 }
 
 /**
@@ -1692,7 +1692,7 @@ declare module "@prismicio/client" {
       ProgramsSliceVariation,
       ProgramsSliceDefault,
       TeamSlice,
-      TeamSliceDefaultPrimaryTitleItem,
+      TeamSliceDefaultPrimaryMembersItem,
       TeamSliceDefaultPrimary,
       TeamSliceVariation,
       TeamSliceDefault,

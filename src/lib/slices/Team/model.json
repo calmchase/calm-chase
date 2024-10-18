@@ -12,7 +12,7 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "title": {
+        "members": {
           "type": "Group",
           "config": {
             "label": "Members",
