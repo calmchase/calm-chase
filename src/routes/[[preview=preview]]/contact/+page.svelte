@@ -8,7 +8,7 @@
   import { formatPhoneNumber } from "@/utils.js";
   import { PrismicLink } from "@prismicio/svelte";
   import { toast } from "svelte-sonner";
-  import SuperDebug, { superForm } from "sveltekit-superforms";
+  import { superForm } from "sveltekit-superforms";
   import { zodClient } from "sveltekit-superforms/adapters";
   import type { PageData } from "./$types.js";
   import { contactSchema } from "./schema.js";
@@ -29,7 +29,7 @@
     },
   });
 
-  const { form: formData, enhance, capture, restore, errors } = form;
+  const { form: formData, enhance, capture, restore } = form;
 
   export const snapshot = { capture, restore };
 </script>
@@ -79,7 +79,7 @@
             {...attrs}
             type="text"
             inputmode="text"
-            placeholder="John"
+            placeholder="Enter your first name"
             autocomplete="given-name"
             class="rounded-none border-0 border-b-2  focus-visible:ring-0  "
             bind:value="{$formData.firstName}" />
@@ -95,7 +95,7 @@
             {...attrs}
             type="text"
             inputmode="text"
-            placeholder="Doe"
+            placeholder="Enter your last name"
             autocomplete="family-name"
             class="rounded-none border-0 border-b-2  focus-visible:ring-0  "
             bind:value="{$formData.lastName}" />
@@ -115,7 +115,7 @@
             type="email"
             inputmode="email"
             autocomplete="email"
-            placeholder="name@org.com"
+            placeholder="Enter your email id"
             class="rounded-none border-0 border-b-2  focus-visible:ring-0  "
             bind:value="{$formData.email}" />
         </Form.Control>
@@ -134,7 +134,7 @@
             type="tel"
             inputmode="tel"
             autocomplete="tel"
-            placeholder="(884) 992-3455"
+            placeholder="Enter phone number"
             class="rounded-none border-0 border-b-2 pl-3  focus-visible:ring-0  "
             value="{formatPhoneNumber($formData.phone)}"
             on:input="{(e) => {
@@ -191,6 +191,3 @@
     </Button>
   </form>
 </section>
-
-<SuperDebug data="{$formData}" />
-<pre>{JSON.stringify(errors, null, 2)}</pre>

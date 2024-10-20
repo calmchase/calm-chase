@@ -15,9 +15,9 @@
   data-slice-type="{slice.slice_type}"
   data-slice-variation="{slice.variation}"
   class="mt-6 bg-blue1 md:mt-13">
-  <div class="mx-auto w-full max-w-7xl pt-4 text-center text-white md:pt-11">
+  <div class="mx-auto w-full max-w-7xl py-4 text-center text-white md:py-11">
     <p
-      class="col-span-full mb-4 font-grot text-2xl font-black md:row-span-full md:mb-8 md:text-5xl">
+      class="col-span-full mb-4 font-grot text-2xl font-black text-white md:row-span-full md:mb-8 md:text-5xl">
       OUR <span class="text-yellow1">ACTIVITIES</span>
     </p>
     <div class="grid grid-cols-2 gap-3 px-10 md:grid-cols-4 md:gap-6 md:px-6">
@@ -47,7 +47,10 @@
             </Dialog.Content>
           </Dialog.Root>
         {:else}
-          <Drawer.Root bind:open="{open[i]}">
+          <Drawer.Root
+            shouldScaleBackground
+            snapPoints="{[0.8]}"
+            bind:open="{open[i]}">
             <Drawer.Trigger asChild let:builder>
               <Button.Root
                 class="relative border-none p-0 shadow-md hover:shadow-xl"
@@ -59,14 +62,16 @@
                 </h6>
               </Button.Root>
             </Drawer.Trigger>
-            <Drawer.Content class="flex flex-col bg-yellow1 px-5 py-4">
-              <Drawer.Header class="h-auto w-full">
-                <PrismicImage field="{element.wide}" />
-              </Drawer.Header>
-              <Drawer.Title class="pb-6 font-int text-xl font-semibold">
-                {element.title}
-              </Drawer.Title>
-              <PrismicRichText field="{element.content}" />
+            <Drawer.Content class="h-full bg-yellow1 px-5">
+              <div class="flex flex-col overflow-y-auto pb-38 pt-4">
+                <Drawer.Header class="h-auto w-full">
+                  <PrismicImage field="{element.wide}" />
+                </Drawer.Header>
+                <Drawer.Title class="pb-6 font-int text-xl font-semibold">
+                  {element.title}
+                </Drawer.Title>
+                <PrismicRichText field="{element.content}" />
+              </div>
             </Drawer.Content>
           </Drawer.Root>
         {/if}

@@ -24,6 +24,8 @@ export default {
       },
       animation: {
         tilt: "tilt 10s infinite linear",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         flip: "flip 6s infinite steps(2, end)",
         kitrotate: "kitrotate 3s linear infinite both",
         shine: "shine 2s linear infinite",
@@ -32,6 +34,11 @@ export default {
         "caret-blink": "caret-blink 1.25s ease-out infinite",
       },
       keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
         shine: {
           from: { backgroundPosition: "0 0" },
           to: { backgroundPosition: "-200% 0" },

@@ -16,22 +16,22 @@
 
 <header
   aria-label="Header"
-  class="mx-auto mt-4 flex w-full max-w-7xl flex-row items-center justify-between px-5 md:mt-10">
+  class="mx-auto mt-4 flex w-full max-w-7xl flex-row items-center justify-between px-5 lg:mt-10">
   <div class="flex items-center gap-3">
-    <div class="h-9 w-9 md:h-15 md:w-15"><Favicon /></div>
+    <a href="/" class="h-9 w-9 lg:h-15 lg:w-15"><Favicon /></a>
   </div>
-  <ul class="hidden flex-row gap-8 rounded-full bg-white1 px-15 py-5 md:flex">
+  <ul class="hidden flex-row gap-8 rounded-full bg-white1 px-15 py-5 lg:flex">
     {#each scaffold.data.nav.filter((e) => !e.cta) as element (element.link.text)}
       <li>
         <PrismicLink
           field="{element.link}"
-          class="font-int text-sm font-medium text-black">
+          class="font-int  text-sm font-medium text-black hover:text-yellow1 active:text-yellow1">
           {element.link.text}
         </PrismicLink>
       </li>
     {/each}
   </ul>
-  <ul class="hidden flex-row gap-8 md:flex">
+  <ul class="hidden flex-row gap-8 lg:flex">
     {#each scaffold.data.nav.filter((e) => e.cta) as element (element.link.text)}
       <li>
         <PrismicLink
@@ -43,11 +43,11 @@
     {/each}
   </ul>
 
-  <div class="md:hidden">
+  <div class="lg:hidden">
     <Sheet.Root>
       <Sheet.Trigger asChild let:builder>
         <Button builders="{[builder]}" variant="ghost" size="icon">
-          <CiMenuAlt01 class="h-6 w-6  md:hidden" />
+          <CiMenuAlt01 class="h-6 w-6  lg:hidden" />
         </Button>
       </Sheet.Trigger>
       <Sheet.Content
@@ -57,7 +57,7 @@
           <Sheet.Title>
             <Sheet.Close asChild let:builder>
               <Button builders="{[builder]}" variant="ghost" size="icon">
-                <X class="h-6 w-6 text-end   text-white md:hidden" />
+                <X class="h-6 w-6 text-end   text-white lg:hidden" />
               </Button>
             </Sheet.Close>
           </Sheet.Title>

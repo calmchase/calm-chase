@@ -18,23 +18,23 @@
   class="flex flex-col items-center justify-center bg-[url('/bg.webp')] bg-cover bg-center bg-no-repeat text-white">
   <header
     aria-label="Header"
-    class="mx-auto mt-4 flex w-full max-w-7xl flex-row items-center justify-between px-5 md:mt-10">
+    class="mx-auto mt-4 flex w-full max-w-7xl flex-row items-center justify-between px-5 lg:mt-10">
     <div class="flex items-center gap-3">
-      <div class="h-9 w-9 md:h-15 md:w-15"><Favicon /></div>
-      <div class="h-5 w-18 md:h-10 md:w-32"><Fulllogo /></div>
+      <a href="/" class="h-9 w-9 lg:h-15 lg:w-15"><Favicon /></a>
+      <a href="/" class="h-5 w-18 lg:h-10 lg:w-32"><Fulllogo /></a>
     </div>
-    <ul class="hidden flex-row gap-8 rounded-full bg-white1 px-15 py-5 md:flex">
+    <ul class="hidden flex-row gap-8 rounded-full bg-white1 px-15 py-5 lg:flex">
       {#each slice.primary.nav.filter((e) => !e.cta) as element (element.link.text)}
         <li>
           <PrismicLink
             field="{element.link}"
-            class="font-int text-sm font-medium text-black">
+            class="font-int text-sm font-medium text-black hover:text-yellow1 active:text-yellow1">
             {element.link.text}
           </PrismicLink>
         </li>
       {/each}
     </ul>
-    <ul class="hidden flex-row gap-8 md:flex">
+    <ul class="hidden flex-row gap-8 lg:flex">
       {#each slice.primary.nav.filter((e) => e.cta) as element (element.link.text)}
         <li>
           <PrismicLink
@@ -46,11 +46,11 @@
       {/each}
     </ul>
 
-    <div class="md:hidden">
+    <div class="lg:hidden">
       <Sheet.Root>
         <Sheet.Trigger asChild let:builder>
           <Button builders="{[builder]}" variant="ghost" size="icon">
-            <CiMenuAlt01 class="h-6 w-6  md:hidden" />
+            <CiMenuAlt01 class="h-6 w-6  lg:hidden" />
           </Button>
         </Sheet.Trigger>
         <Sheet.Content
@@ -60,7 +60,7 @@
             <Sheet.Title>
               <Sheet.Close asChild let:builder>
                 <Button builders="{[builder]}" variant="ghost" size="icon">
-                  <X class="h-6 w-6 text-end   text-white md:hidden" />
+                  <X class="h-6 w-6 text-end   text-white lg:hidden" />
                 </Button>
               </Sheet.Close>
             </Sheet.Title>
@@ -98,7 +98,7 @@
     </div>
   </header>
   <h3
-    class="mt-22 px-8 pb-3 text-center font-grot text-2xl font-black md:mt-96 md:pb-5 md:text-5xl">
+    class="mt-22 text-pretty px-8 pb-3 text-center font-grot text-2xl font-black md:mt-96 md:pb-5 md:text-5xl">
     {slice.primary.title}
   </h3>
   {#if link}

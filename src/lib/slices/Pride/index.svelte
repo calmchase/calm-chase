@@ -38,7 +38,7 @@
                 class="pb-4 font-man text-base font-extrabold md:pb-8 md:text-5xl">
                 {element?.name}
               </h1>
-              <p class="text-xs md:text-base">
+              <p class="h-40 text-clip text-pretty text-xs md:text-base">
                 <PrismicRichText field="{element?.description}" />
               </p>
             </div>

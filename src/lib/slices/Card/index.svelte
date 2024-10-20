@@ -13,7 +13,7 @@
 <section
   data-slice-type="{slice.slice_type}"
   data-slice-variation="{slice.variation}"
-  class="mx-auto w-full max-w-7xl bg-white1 px-2 py-5 text-start md:py-16">
+  class="mx-auto w-full max-w-7xl bg-white px-2 py-5 text-start md:py-16">
   <Card.Root
     class="mx-auto flex w-full  max-w-6xl flex-col items-center gap-6 rounded-sm  bg-blue1  md:flex-row md:py-20 md:pl-22   md:pr-11">
     <Card.Content
@@ -32,7 +32,7 @@
       <Card.Footer class="flex justify-between self-center p-0 md:self-auto ">
         <PrismicLink
           field="{slice.primary.cta}"
-          class="mb-4 rounded-full bg-yellow1 px-6 py-2 font-int text-base font-semibold text-blue1 hover:bg-blue1 hover:text-yellow1 active:bg-blue1 active:text-yellow1 md:px-13 md:py-6  ">
+          class="mb-4 rounded-full bg-yellow1 px-6 py-2 font-int text-base font-semibold text-blue1 hover:bg-white1 hover:text-black1 active:bg-white1 active:text-black1 md:px-13 md:py-6  ">
           {slice.primary.cta.text}
         </PrismicLink>
       </Card.Footer>
