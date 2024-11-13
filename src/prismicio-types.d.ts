@@ -843,48 +843,13 @@ export type ScaffoldDocument<Lang extends string = string> =
     Lang
   >;
 
-type TestimonialDocumentDataSlicesSlice = never;
-
-/**
- * Content for Testimonial documents
- */
-interface TestimonialDocumentData {
-  /**
-   * `slices` field in *Testimonial*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: testimonial.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<TestimonialDocumentDataSlicesSlice>;
-}
-
-/**
- * Testimonial document from Prismic
- *
- * - **API ID**: `testimonial`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type TestimonialDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<TestimonialDocumentData>,
-    "testimonial",
-    Lang
-  >;
-
 export type AllDocumentTypes =
   | AboutDocument
   | BlogDocument
   | ContactDocument
   | HomeDocument
   | PageDocument
-  | ScaffoldDocument
-  | TestimonialDocument;
+  | ScaffoldDocument;
 
 /**
  * Item in *Activities → Default → Primary → Activities*
@@ -1833,9 +1798,6 @@ declare module "@prismicio/client" {
       ScaffoldDocumentDataCompanyItem,
       ScaffoldDocumentDataQuickLinksItem,
       ScaffoldDocumentDataFooterItem,
-      TestimonialDocument,
-      TestimonialDocumentData,
-      TestimonialDocumentDataSlicesSlice,
       AllDocumentTypes,
       ActivitiesSlice,
       ActivitiesSliceDefaultPrimaryActivitiesItem,

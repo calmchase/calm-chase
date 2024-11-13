@@ -1,5 +1,5 @@
 {
-  "repositoryName": "calm-chase",
+  "repositoryName": "calmchase",
   "adapter": "@slicemachine/adapter-sveltekit",
   "libraries": ["./src/lib/slices"],
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
