@@ -1,4 +1,5 @@
 import { createClient } from "$lib/prismicio";
+import { saveResponse } from "@/server/firebase.js";
 import { fail, superValidate, type Infer } from "sveltekit-superforms";
 import { zod } from "sveltekit-superforms/adapters";
 import type { Actions } from "./$types.js";
@@ -32,6 +33,7 @@ export const actions: Actions = {
         form,
       });
     }
+    saveResponse(form.data);
     console.log(JSON.stringify(form.data, null, 2));
     return { form };
   },
