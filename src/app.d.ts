@@ -23,7 +23,9 @@ declare global {
     }
 
     // interface Error {}
-    // interface Locals {}
+    interface Locals {
+      user: import("firebase-admin/auth").DecodedIdToken | null;
+    }
     // interface PageData {}
     // interface PageState {}
     interface Platform {
