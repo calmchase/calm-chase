@@ -94,10 +94,10 @@
               </Button.Root>
             </Dialog.Trigger>
             <Dialog.Content
-              class="flex max-w-6xl items-center gap-10 bg-blue1 p-10">
-              <li class="h-auto w-full rounded-md md:h-88 md:w-88">
+              class="flex max-w-xl items-center rounded-md border-none bg-transparent p-4 ">
+              <div class="h-auto w-full rounded-md">
                 <PrismicImage field="{item.image}" />
-              </li>
+              </div>
             </Dialog.Content>
           </Dialog.Root>
         {:else}
@@ -114,10 +114,10 @@
                 </li>
               </Button.Root>
             </Drawer.Trigger>
-            <Drawer.Content class="h-full bg-blue1 px-5">
-              <li class="h-auto w-full rounded-md md:h-88 md:w-88">
+            <Drawer.Content class="h-full border-none bg-transparent px-5">
+              <div class="h-auto w-full rounded-md">
                 <PrismicImage field="{item.image}" />
-              </li>
+              </div>
             </Drawer.Content>
           </Drawer.Root>
         {/if}
