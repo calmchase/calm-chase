@@ -10,7 +10,7 @@
 <section
   data-slice-type="{slice.slice_type}"
   data-slice-variation="{slice.variation}"
-  class="mx-auto w-full max-w-7xl px-4">
+  class="mx-auto w-full max-w-screen-sm px-4 md:max-w-7xl">
   <p
     class="col-span-full mb-4 mt-6 text-center font-grot text-2xl font-black md:row-span-full md:mb-8 md:mt-13 md:text-5xl">
     OUR PRIDE
@@ -22,7 +22,7 @@
       loop: true,
     }}"
     class="relative mx-auto  w-full md:max-w-4xl">
-    <Carousel.Content class="max-w-screen-sm md:max-w-4xl">
+    <Carousel.Content class="md:max-w-4xl">
       {#each slice.primary.cards as element, i (i)}
         <Carousel.Item>
           <div
