@@ -15,16 +15,20 @@
   </p>
   <div class="grid grid-cols-2 gap-3 px-2 md:grid-cols-4 md:gap-6 md:px-6">
     {#each slice.primary.programs as element}
-      <Card.Root class=" bg-yellow1  ">
-        <Card.Content class="flex flex-col gap-2 px-1 py-8 md:px-6">
-          <Card.Title class="text-base font-semibold text-grey1 md:text-3xl  ">
-            {element.title}
-          </Card.Title>
-          <Card.Description class="text-sm font-normal text-grey1 md:text-base">
-            {element.description}
-          </Card.Description>
-        </Card.Content>
-      </Card.Root>
+      <a href="/contact">
+        <Card.Root class=" bg-yellow1  ">
+          <Card.Content class="flex flex-col gap-2 px-1 py-8 md:px-6">
+            <Card.Title
+              class="text-base font-semibold text-grey1 md:text-3xl  ">
+              {element.title}
+            </Card.Title>
+            <Card.Description
+              class="text-sm font-normal text-grey1 md:text-base">
+              {element.description}
+            </Card.Description>
+          </Card.Content>
+        </Card.Root>
+      </a>
     {/each}
   </div>
 </section>

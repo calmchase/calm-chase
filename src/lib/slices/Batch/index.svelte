@@ -2,7 +2,6 @@
   import * as Card from "$lib/components/ui/card/index.js";
   import * as Table from "$lib/components/ui/table/index.js";
   import type { Content } from "@prismicio/client";
-  import { PrismicLink } from "@prismicio/svelte";
 
   export let slice: Content.BatchSlice;
 </script>
@@ -18,11 +17,11 @@
         <Card.Description>{slice.primary.fees}</Card.Description>
       </div>
 
-      <PrismicLink
-        field="{slice.primary.cta}"
-        class="  rounded-full bg-blue1 px-5   py-3 text-center font-int text-xs font-semibold text-white1 hover:bg-yellow1 hover:text-blue1 active:bg-yellow1 active:text-blue1 md:px-12 md:py-5 md:text-base">
+      <a
+        href="/contact"
+        class="rounded-full bg-blue1 px-5 py-3 text-center font-int text-xs font-semibold text-white1 hover:bg-yellow1 hover:text-blue1 active:bg-yellow1 active:text-blue1 md:px-12 md:py-5 md:text-base">
         {slice.primary.cta.text}
-      </PrismicLink>
+      </a>
     </Card.Header>
     <Card.Content class="mx-auto w-full p-0 pt-5">
       <Table.Root>
