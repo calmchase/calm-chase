@@ -47,7 +47,7 @@
 <section
   class="mx-auto mb-22 flex w-full max-w-6xl flex-col gap-10 px-2 md:mb-80 md:flex-row">
   <div
-    class=" flex flex-col items-start justify-center rounded-md bg-[url('/contact.webp')] bg-cover bg-center bg-no-repeat p-5 md:basis-2/5 md:p-10">
+    class=" hidden flex-col items-start justify-center rounded-md bg-[url('/contact.webp')] bg-cover bg-center bg-no-repeat p-5 md:flex md:basis-2/5 md:p-10">
     <h5 class="font-int text-2.5xl text-white1">Contact Information</h5>
     <ul
       class="flex flex-col items-start gap-6 text-wrap pb-24 font-int text-base font-normal text-white">
@@ -66,7 +66,7 @@
   </div>
   <form
     method="POST"
-    class="flex basis-3/5 flex-col gap-5 px-9 md:gap-10 md:px-0"
+    class="flex basis-3/5 flex-col gap-5 px-9 pt-4 md:gap-10 md:px-0 md:pt-0"
     use:enhance>
     <div
       class="flex w-full flex-col justify-between gap-5 md:flex-row md:gap-10">

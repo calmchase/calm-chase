@@ -1,10 +1,16 @@
 <script lang="ts">
+  import * as Dialog from "$lib/components/ui/dialog/index.js";
+  import * as Drawer from "$lib/components/ui/drawer/index.js";
   import { cn } from "$lib/utils";
   import type { Content } from "@prismicio/client";
   import { PrismicImage } from "@prismicio/svelte";
+  import { Button } from "bits-ui";
   import { onMount } from "svelte";
+  import { mediaQuery } from "svelte-legos";
 
+  const isDesktop = mediaQuery("(min-width: 768px)");
   export let slice: Content.CarouselSlice;
+  let open = new Array(slice.primary.images.length).fill(false);
 
   let containerRef: HTMLDivElement;
   let scrollerRef: HTMLUListElement;
@@ -71,14 +77,50 @@
     <ul
       bind:this="{scrollerRef}"
       class="{cn(
-        ' flex w-max min-w-full shrink-0 flex-nowrap gap-4 bg-yellow1 py-4',
+        ' flex w-max min-w-full shrink-0 flex-nowrap gap-4 bg-blue1 py-4',
         start && 'animate-scroll ',
         pauseOnHover && 'hover:[animation-play-state:paused]',
       )}">
       {#each slice.primary.images as item, i (i)}
-        <li class="h-44 w-44 rounded-md md:h-88 md:w-88">
-          <PrismicImage field="{item.image}" />
-        </li>
+        {#if $isDesktop}
+          <Dialog.Root bind:open="{open[i]}">
+            <Dialog.Trigger asChild let:builder>
+              <Button.Root
+                class="relative border-none p-0 shadow-md hover:shadow-xl"
+                builders="{[builder]}">
+                <li class="h-44 w-44 rounded-md md:h-88 md:w-88">
+                  <PrismicImage field="{item.image}" />
+                </li>
+              </Button.Root>
+            </Dialog.Trigger>
+            <Dialog.Content
+              class="flex max-w-6xl items-center gap-10 bg-blue1 p-10">
+              <li class="h-auto w-full rounded-md md:h-88 md:w-88">
+                <PrismicImage field="{item.image}" />
+              </li>
+            </Dialog.Content>
+          </Dialog.Root>
+        {:else}
+          <Drawer.Root
+            shouldScaleBackground
+            snapPoints="{[0.8]}"
+            bind:open="{open[i]}">
+            <Drawer.Trigger asChild let:builder>
+              <Button.Root
+                class="relative border-none p-0 shadow-md hover:shadow-xl"
+                builders="{[builder]}">
+                <li class="h-44 w-44 rounded-md md:h-88 md:w-88">
+                  <PrismicImage field="{item.image}" />
+                </li>
+              </Button.Root>
+            </Drawer.Trigger>
+            <Drawer.Content class="h-full bg-blue1 px-5">
+              <li class="h-auto w-full rounded-md md:h-88 md:w-88">
+                <PrismicImage field="{item.image}" />
+              </li>
+            </Drawer.Content>
+          </Drawer.Root>
+        {/if}
       {/each}
     </ul>
   </div>
