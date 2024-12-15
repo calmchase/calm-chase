@@ -12,9 +12,9 @@
 <section
   data-slice-type="{slice.slice_type}"
   data-slice-variation="{slice.variation}"
-  class="bg-blue1">
+  class="bg-blue1 py-5 md:py-10">
   <section
-    class="mx-auto my-10 grid max-w-7xl grid-cols-2 place-content-start place-items-start gap-4 py-5 md:grid-cols-4">
+    class="mx-auto my-10 grid max-w-7xl grid-cols-2 place-content-start place-items-start gap-4 md:grid-cols-4">
     <div class="grid grid-cols-subgrid place-content-center place-items-center">
       <div class="w-16 md:w-32"><Defence /></div>
       <NumberTicker
