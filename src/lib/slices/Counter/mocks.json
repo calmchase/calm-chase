@@ -1,0 +1,29 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "defence": {
+        "__TYPE__": "FieldContent",
+        "value": "angle",
+        "type": "Text"
+      },
+      "community": {
+        "__TYPE__": "FieldContent",
+        "value": "ruler",
+        "type": "Text"
+      },
+      "tech": {
+        "__TYPE__": "FieldContent",
+        "value": "single",
+        "type": "Text"
+      },
+      "adventure": {
+        "__TYPE__": "FieldContent",
+        "value": "scale",
+        "type": "Text"
+      }
+    },
+    "items": []
+  }
+]

@@ -5,6 +5,7 @@ import Batch from "./Batch/index.svelte";
 import Blog from "./Blog/index.svelte";
 import Card from "./Card/index.svelte";
 import Carousel from "./Carousel/index.svelte";
+import Counter from "./Counter/index.svelte";
 import Gallery from "./Gallery/index.svelte";
 import Header from "./Header/index.svelte";
 import Hero from "./Hero/index.svelte";
@@ -19,6 +20,7 @@ export const components = {
   blogs: Blog,
   card: Card,
   carousel: Carousel,
+  counter: Counter,
   gallery: Gallery,
   header: Header,
   hero: Hero,

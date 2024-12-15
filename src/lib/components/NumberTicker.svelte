@@ -23,5 +23,5 @@
     className,
   )}"
   {...$$restProps}>
-  {$num.toFixed(0)}
+  {$num.toFixed(0)}+
 </div>
