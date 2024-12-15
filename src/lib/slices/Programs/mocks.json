@@ -24,6 +24,18 @@
                   "type": "Text",
                   "value": "Immersive 3-month program to enhance your personality, featuring both online and offline activities"
                 }
+              ],
+              [
+                "goto",
+                {
+                  "__TYPE__": "LinkContent",
+                  "key": "017efeee-f223-43bb-a716-a57f2c5fe49d",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "https://prismic.io",
+                    "text": "becoming"
+                  }
+                }
               ]
             ]
           },
@@ -45,6 +57,18 @@
                   "type": "Text",
                   "value": "Our proven methods and expert guidance will equip you with the skills and confidence needed to excel in the selection process."
                 }
+              ],
+              [
+                "goto",
+                {
+                  "__TYPE__": "LinkContent",
+                  "key": "efdeee61-1244-4f8f-8bec-b743007a7fd0",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "https://prismic.io",
+                    "text": "stay"
+                  }
+                }
               ]
             ]
           },
@@ -65,6 +89,18 @@
                   "__TYPE__": "FieldContent",
                   "type": "Text",
                   "value": "Our proven methods and expert guidance will equip you with the skills and confidence needed to excel in the selection process."
+                }
+              ],
+              [
+                "goto",
+                {
+                  "__TYPE__": "LinkContent",
+                  "key": "6c0d241a-13fe-4500-8b0b-583a2e7851d7",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "http://google.com",
+                    "text": "character"
+                  }
                 }
               ]
             ]
@@ -86,6 +122,18 @@
                   "__TYPE__": "FieldContent",
                   "type": "Text",
                   "value": "Personality Development"
+                }
+              ],
+              [
+                "goto",
+                {
+                  "__TYPE__": "LinkContent",
+                  "key": "74e8dacf-36b7-470a-9530-b7d3ecadcd0f",
+                  "value": {
+                    "__TYPE__": "ExternalLink",
+                    "url": "http://twitter.com",
+                    "text": "know"
+                  }
                 }
               ]
             ]

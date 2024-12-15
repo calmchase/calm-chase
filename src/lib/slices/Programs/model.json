@@ -31,6 +31,17 @@
                   "label": "Description",
                   "placeholder": "Immersive 3-month program to enhance your personality, featuring both online and offline activities"
                 }
+              },
+              "goto": {
+                "type": "Link",
+                "config": {
+                  "label": "Goto",
+                  "placeholder": "Add link to this page",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
               }
             }
           }
