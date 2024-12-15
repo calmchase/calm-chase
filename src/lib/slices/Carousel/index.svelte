@@ -76,11 +76,11 @@
 <section
   data-slice-type="{slice.slice_type}"
   data-slice-variation="{slice.variation}"
-  class=" w-full bg-blue1 py-4 text-center md:py-14">
+  class="w-full bg-blue1 py-4 text-center md:max-w-full md:py-14">
   <div
     bind:this="{containerRef}"
     class="{cn(
-      'scroller relative z-20 mx-auto max-w-screen-sm overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]  md:max-w-7xl',
+      'scroller relative z-20 mx-auto max-w-sm  overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]  md:max-w-7xl',
     )}">
     <ul
       bind:this="{scrollerRef}"
