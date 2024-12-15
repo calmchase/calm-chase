@@ -22,7 +22,7 @@
       loop: true,
     }}"
     class="relative mx-auto  w-full md:max-w-4xl">
-    <Carousel.Content class="md:max-w-4xl">
+    <Carousel.Content class="max-w-80 md:max-w-4xl">
       {#each slice.primary.cards as element, i (i)}
         <Carousel.Item>
           <div
