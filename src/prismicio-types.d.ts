@@ -1551,6 +1551,16 @@ export interface ProgramsSliceDefaultPrimaryProgramsItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   description: prismic.KeyTextField;
+
+  /**
+   * Goto field in *Programs → Default → Primary → Programs*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: Add link to this page
+   * - **API ID Path**: programs.default.primary.programs[].goto
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  goto: prismic.LinkField;
 }
 
 /**
