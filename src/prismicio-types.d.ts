@@ -432,6 +432,7 @@ export type ContactDocument<Lang extends string = string> =
   >;
 
 type HomeDocumentDataSlicesSlice =
+  | CounterSlice
   | TeamSlice
   | PrideSlice
   | CarouselSlice
@@ -1303,6 +1304,81 @@ export type CarouselSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Counter → Default → Primary*
+ */
+export interface CounterSliceDefaultPrimary {
+  /**
+   * Defence field in *Counter → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: How many selections in defence forces ?
+   * - **API ID Path**: counter.default.primary.defence
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  defence: prismic.KeyTextField;
+
+  /**
+   * Community field in *Counter → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: How many community members?
+   * - **API ID Path**: counter.default.primary.community
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  community: prismic.KeyTextField;
+
+  /**
+   * Tech field in *Counter → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: How many tech club members?
+   * - **API ID Path**: counter.default.primary.tech
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  tech: prismic.KeyTextField;
+
+  /**
+   * Adventure field in *Counter → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: How many adventure club members?
+   * - **API ID Path**: counter.default.primary.adventure
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  adventure: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Counter Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CounterSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CounterSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Counter*
+ */
+type CounterSliceVariation = CounterSliceDefault;
+
+/**
+ * Counter Shared Slice
+ *
+ * - **API ID**: `counter`
+ * - **Description**: Counter
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CounterSlice = prismic.SharedSlice<
+  "counter",
+  CounterSliceVariation
+>;
+
+/**
  * Item in *Gallery → Default → Primary → Images*
  */
 export interface GallerySliceDefaultPrimaryImagesItem {
@@ -1894,6 +1970,10 @@ declare module "@prismicio/client" {
       CarouselSliceDefaultPrimary,
       CarouselSliceVariation,
       CarouselSliceDefault,
+      CounterSlice,
+      CounterSliceDefaultPrimary,
+      CounterSliceVariation,
+      CounterSliceDefault,
       GallerySlice,
       GallerySliceDefaultPrimaryImagesItem,
       GallerySliceDefaultPrimary,

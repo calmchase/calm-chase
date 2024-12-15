@@ -1,0 +1,47 @@
+{
+  "id": "counter",
+  "type": "SharedSlice",
+  "name": "Counter",
+  "description": "Counter",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "defence": {
+          "type": "Text",
+          "config": {
+            "label": "Defence",
+            "placeholder": "How many selections in defence forces ?"
+          }
+        },
+        "community": {
+          "type": "Text",
+          "config": {
+            "label": "Community",
+            "placeholder": "How many community members?"
+          }
+        },
+        "tech": {
+          "type": "Text",
+          "config": {
+            "label": "Tech",
+            "placeholder": "How many tech club members?"
+          }
+        },
+        "adventure": {
+          "type": "Text",
+          "config": {
+            "label": "Adventure",
+            "placeholder": "How many adventure club members?"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
