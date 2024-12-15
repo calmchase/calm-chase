@@ -5,6 +5,7 @@ import Batch from "./Batch/index.svelte";
 import Blog from "./Blog/index.svelte";
 import Card from "./Card/index.svelte";
 import Carousel from "./Carousel/index.svelte";
+import Gallery from "./Gallery/index.svelte";
 import Header from "./Header/index.svelte";
 import Hero from "./Hero/index.svelte";
 import Pride from "./Pride/index.svelte";
@@ -18,6 +19,7 @@ export const components = {
   blogs: Blog,
   card: Card,
   carousel: Carousel,
+  gallery: Gallery,
   header: Header,
   hero: Hero,
   pride: Pride,

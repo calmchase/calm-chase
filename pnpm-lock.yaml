@@ -83,6 +83,9 @@ importers:
       paneforge:
         specifier: ^0.0.6
         version: 0.0.6(svelte@4.2.19)
+      photoswipe:
+        specifier: ^5.4.4
+        version: 5.4.4
       postgres:
         specifier: ^3.4.5
         version: 3.4.5
@@ -4575,6 +4578,10 @@ packages:
 
   periscopic@3.1.0:
     resolution: {integrity: sha512-vKiQ8RRtkl9P+r/+oefh25C3fhybptkHKCZSPlcXiJux2tJF55GnEj3BVn4A5gKfq9NWWXXrxkHBwVPUfH0opw==}
+
+  photoswipe@5.4.4:
+    resolution: {integrity: sha512-WNFHoKrkZNnvFFhbHL93WDkW3ifwVOXSW3w1UuZZelSmgXpIGiZSNlZJq37rR8YejqME2rHs9EhH9ZvlvFH2NA==}
+    engines: {node: '>= 0.12.0'}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -10325,6 +10332,8 @@ snapshots:
       '@types/estree': 1.0.6
       estree-walker: 3.0.3
       is-reference: 3.0.3
+
+  photoswipe@5.4.4: {}
 
   picocolors@1.1.1: {}
 
