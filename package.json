@@ -135,6 +135,7 @@
     "lucide-svelte": "^0.452.0",
     "mode-watcher": "^0.4.1",
     "paneforge": "^0.0.6",
+    "photoswipe": "^5.4.4",
     "postgres": "^3.4.5",
     "svelte-legos": "^0.2.5",
     "svelte-motion": "^0.12.2",
