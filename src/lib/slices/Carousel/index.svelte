@@ -61,14 +61,6 @@
   };
 </script>
 
-<p class=" w-full bg-yellow1 text-center text-white1">
-  Hackathon results are out!!. <a
-    target="_blank"
-    href="http://calmchase.com/results.pdf"
-    class="animate-pulse font-bold underline">
-    Click here to See your score now !
-  </a>
-</p>
 <p
   class="col-span-full mb-4 w-full pt-5 text-center font-grot text-2xl font-black text-grey1 md:row-span-full md:mb-8 md:pt-18 md:text-5xl">
   RECENT HIGHLIGHTS
