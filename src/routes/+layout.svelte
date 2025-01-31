@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { page } from "$app/state";
+  import { page } from "$app/stores";
   import Sonner from "$lib/components/ui/sonner/sonner.svelte";
   import { repositoryName } from "$lib/prismicio";
   import Footer from "@/components/Footer.svelte";
@@ -29,25 +29,25 @@
   {/each}
   <!-- eslint-disable-next-line svelte/no-at-html-tags -->
   {@html webManifestLink}
-  <title>{page.data.meta_title}</title>
-  {#if page.data.meta_description}
-    <meta name="description" content="{page.data.meta_description}" />
+  <title>{$page.data.meta_title}</title>
+  {#if $page.data.meta_description}
+    <meta name="description" content="{$page.data.meta_description}" />
   {/if}
-  {#if page.data.meta_title}
-    <meta name="og:title" content="{page.data.meta_title}" />
+  {#if $page.data.meta_title}
+    <meta name="og:title" content="{$page.data.meta_title}" />
   {/if}
-  {#if page.data.meta_image}
-    <meta name="og:image" content="{page.data.meta_image}" />
+  {#if $page.data.meta_image}
+    <meta name="og:image" content="{$page.data.meta_image}" />
     <meta name="twitter:card" content="summary_large_image" />
   {/if}
 </svelte:head>
 
 <main class="bg-white font-int">
-  {#if !page.data.hideHeader}
+  {#if !$page.data.hideHeader}
     <Header scaffold="{data.scaffold}" />
   {/if}
   <slot />
-  {#if !page.data.hideFooter}
+  {#if !$page.data.hideFooter}
     <Footer scaffold="{data.scaffold}" />
   {/if}
 </main>
