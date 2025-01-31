@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Globe from "~icons/ion/globe-outline";
   import Mail from "~icons/material-symbols-light/mail";
   import Instagram from "~icons/mdi/instagram";
   import LinkedIn from "~icons/mdi/linkedin";
@@ -19,6 +20,8 @@
     <Instagram />
   {:else if icon.toLocaleLowerCase().trim() === "linkedin"}
     <LinkedIn />
+  {:else if icon.toLocaleLowerCase().trim() === "internet"}
+    <Globe />
   {:else}
     <Phone />
   {/if}

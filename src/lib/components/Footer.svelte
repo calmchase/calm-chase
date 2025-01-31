@@ -68,7 +68,7 @@
     <hr class="mt-8 border-white/30" />
     <div
       class="flex w-full flex-row justify-between py-4 text-xs text-white/50 md:text-base">
-      <p>All rights reserved @2024</p>
+      <p>All rights reserved @2025</p>
       <ul class="flex flex-row gap-4">
         {#each scaffold.data.footer as element (element.link.text)}
           <li>

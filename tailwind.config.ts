@@ -115,6 +115,8 @@ export default {
       fontFamily: {
         int: ["Inter Variable", ...fontFamily.sans],
         grot: ["Schibsted Grotesk Variable", ...fontFamily.serif],
+        mico: ["Michroma", ...fontFamily.sans],
+        mina: ["Mina", ...fontFamily.sans],
         man: ["Manrope Variable"],
       },
       colors: {
@@ -123,6 +125,7 @@ export default {
         black1: "#293238",
         white1: "#F5F5F5",
         red1: "#FF5555",
+        purple1: "#471EFF",
         yellow1: "#B5A57D",
         border: "hsl(var(--border) / <alpha-value>)",
         input: "hsl(var(--input) / <alpha-value>)",
