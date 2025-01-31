@@ -2,12 +2,8 @@
   import * as Sheet from "$lib/components/ui/sheet/index.ts";
   import { Button } from "@/components/ui/button/index.ts";
   import Favicon from "@/svg/Favicon.svelte";
-  import "@fontsource-variable/inter";
-  import "@fontsource-variable/manrope";
-  import "@fontsource-variable/schibsted-grotesk";
   import { type Content } from "@prismicio/client";
   import { PrismicLink } from "@prismicio/svelte";
-  import "highlight.js/styles/github-dark.css";
   import CiMenuAlt01 from "~icons/ci/menu-alt-01";
   import X from "~icons/lucide/x";
 
