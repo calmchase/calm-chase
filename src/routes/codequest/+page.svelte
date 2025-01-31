@@ -45,7 +45,7 @@
       <ul class="hidden flex-row gap-8 lg:flex">
         <a
           href="/"
-          class="rounded-full bg-purple1 p-5 text-base font-semibold text-white1 hover:bg-white hover:text-purple1 active:bg-white active:text-purple1">
+          class="bg-purple1 hover:text-purple1 active:text-purple1 rounded-full p-5 text-base font-semibold text-white1 hover:bg-white active:bg-white">
           Early Bird Registration
         </a>
       </ul>
@@ -86,7 +86,7 @@
             <ul class="flex flex-col items-start gap-8 pt-8">
               <a
                 href="/"
-                class="rounded-full bg-purple1 p-5 text-base font-semibold text-white1 hover:bg-white hover:text-purple1 active:bg-white active:text-purple1">
+                class="bg-purple1 hover:text-purple1 active:text-purple1 rounded-full p-5 text-base font-semibold text-white1 hover:bg-white active:bg-white">
                 Early Bird Registration
               </a>
             </ul>
@@ -94,25 +94,35 @@
         </Sheet.Root>
       </div>
     </header>
-    <section class="text-f2 grid place-content-center">
-      <div
-        class="grid max-w-screen-lg grid-cols-1 items-center gap-15 px-5 pb-10 pt-10 lg:grid-cols-2 lg:px-0 lg:pb-40 lg:pt-22">
-        <article class="space-y-8">
-          <h2
-            class="font-ss text-4.5xl/8 font-normal lg:text-5xl/header xl:text-5.5xl/header">
-            Our customer testimony says it all
-          </h2>
-          <p class="font-sans text-base/5 font-light">
-            With our dedicated team of experienced team in the field of
-            business, specializing in inspecting real estate, studying
-            investment areas, and providing consultations in the field of real
-            estate development With industry breaking insights and right
-            partnership, We were able to deliver great results for our clients.
-          </p>
-        </article>
-        <Player />
-      </div>
-    </section>
+
+    <div
+      class="grid grid-cols-1 items-center px-5 pb-10 pt-10 text-white lg:grid-cols-2 lg:px-0 lg:pb-40 lg:pt-22">
+      <article class="space-y-8">
+        <h2 class="font-man text-4.5xl/8 font-normal md:text-6xl">
+          CodeQuest - Learning & Hackathon
+        </h2>
+        <h6 class="text-4xl">By Calm Chase</h6>
+        <p class="text-base/5 font-light text-white/80">
+          CodeQuest 2025 is a month-long program accelerating coding skills
+          through classes, projects, and mentorship, culminating in a national
+          hackathon with prizes.
+        </p>
+
+        <h6 class="mb-8 text-4xl">Win cash prize up to INR 20,000!</h6>
+        <div class="h-8"></div>
+        <a
+          href="/"
+          class="bg-purple1 hover:text-purple1 active:text-purple1 rounded-full px-5 py-3 text-base font-semibold text-white1 hover:bg-white active:bg-white">
+          Register now ->
+        </a>
+        <p class="text-base/5 font-light text-white/80">
+          Early bird registration open till Feb 25th, 2025.
+        </p>
+        <h6 class="mb-8 text-xl">Learn & earn with Calm Chase</h6>
+      </article>
+      <Player />
+    </div>
+
     <!--Program Highlight section  -->
     <section class="mt-6 md:mt-13">
       <div class="mx-auto w-full py-4 text-center text-white md:py-11">
