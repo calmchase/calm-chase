@@ -1,4 +1,4 @@
-This directory adds support for optional `/preview` routes. Do not remove this directory.
+This directory adds support fr optional `/preview` routes. Do not remove this directory.
 
 All routes within this directory will be served using the following URLs:
 
