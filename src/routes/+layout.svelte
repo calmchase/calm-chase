@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores";
+  import SocialButton from "$lib/components/ui/SocialButton.svelte";
   import Sonner from "$lib/components/ui/sonner/sonner.svelte";
   import { repositoryName } from "$lib/prismicio";
   import Footer from "@/components/Footer.svelte";
@@ -52,5 +53,6 @@
   {/if}
 </main>
 
+<SocialButton />
 <Sonner />
 <PrismicPreview {repositoryName} />
