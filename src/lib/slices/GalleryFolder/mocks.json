@@ -1,0 +1,93 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "cover": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+          "width": 3199,
+          "height": 3199
+        },
+        "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+        "width": 3199,
+        "height": 3199,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "images": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "image",
+                {
+                  "origin": {
+                    "id": "main",
+                    "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+                    "width": 3648,
+                    "height": 4560
+                  },
+                  "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+                  "width": 3648,
+                  "height": 4560,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  },
+                  "credits": null,
+                  "alt": null,
+                  "__TYPE__": "ImageContent",
+                  "thumbnails": {}
+                }
+              ],
+              [
+                "caption",
+                {
+                  "__TYPE__": "StructuredTextContent",
+                  "value": [
+                    {
+                      "type": "paragraph",
+                      "content": {
+                        "text": "Dolore quis nulla proident fugiat commodo eiusmod laboris reprehenderit ea laboris id eiusmod."
+                      }
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "caption": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Qui minim ex consequat ea Lorem dolor duis adipisicing Lorem magna eu et occaecat cillum. Voluptate elit esse fugiat duis velit magna in enim in exercitation elit. Officia deserunt velit reprehenderit labore esse ut duis nisi consequat dolor ipsum nulla proident eiusmod incididunt."
+            }
+          }
+        ]
+      }
+    },
+    "items": []
+  }
+]

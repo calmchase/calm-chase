@@ -431,6 +431,105 @@ export type ContactDocument<Lang extends string = string> =
     Lang
   >;
 
+type GalleryDocumentDataSlicesSlice = GalleryFolderSlice;
+
+/**
+ * Content for Gallery documents
+ */
+interface GalleryDocumentData {
+  /**
+   * Title field in *Gallery*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *Gallery*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery.subtitle
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * HideHeader field in *Gallery*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: gallery.hideheader
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  hideheader: prismic.BooleanField;
+
+  /**
+   * Slice Zone field in *Gallery*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<GalleryDocumentDataSlicesSlice> /**
+   * Meta Title field in *Gallery*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: gallery.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Gallery*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: gallery.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Gallery*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Gallery document from Prismic
+ *
+ * - **API ID**: `gallery`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type GalleryDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<GalleryDocumentData>,
+    "gallery",
+    Lang
+  >;
+
 type HomeDocumentDataSlicesSlice =
   | CounterSlice
   | TeamSlice
@@ -849,6 +948,7 @@ export type AllDocumentTypes =
   | AboutDocument
   | BlogDocument
   | ContactDocument
+  | GalleryDocument
   | HomeDocument
   | PageDocument
   | ScaffoldDocument;
@@ -1439,6 +1539,98 @@ export type GallerySlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *GalleryFolder → Default → Primary → Images*
+ */
+export interface GalleryFolderSliceDefaultPrimaryImagesItem {
+  /**
+   * Image field in *GalleryFolder → Default → Primary → Images*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_folder.default.primary.images[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Caption field in *GalleryFolder → Default → Primary → Images*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_folder.default.primary.images[].caption
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  caption: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *GalleryFolder → Default → Primary*
+ */
+export interface GalleryFolderSliceDefaultPrimary {
+  /**
+   * Cover field in *GalleryFolder → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_folder.default.primary.cover
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  cover: prismic.ImageField<never>;
+
+  /**
+   * Caption field in *GalleryFolder → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_folder.default.primary.caption
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  caption: prismic.RichTextField;
+
+  /**
+   * Images field in *GalleryFolder → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: gallery_folder.default.primary.images[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  images: prismic.GroupField<
+    Simplify<GalleryFolderSliceDefaultPrimaryImagesItem>
+  >;
+}
+
+/**
+ * Default variation for GalleryFolder Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GalleryFolderSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<GalleryFolderSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *GalleryFolder*
+ */
+type GalleryFolderSliceVariation = GalleryFolderSliceDefault;
+
+/**
+ * GalleryFolder Shared Slice
+ *
+ * - **API ID**: `gallery_folder`
+ * - **Description**: GalleryFolder
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GalleryFolderSlice = prismic.SharedSlice<
+  "gallery_folder",
+  GalleryFolderSliceVariation
+>;
+
+/**
  * Item in *Header → Default → Primary → Nav*
  */
 export interface HeaderSliceDefaultPrimaryNavItem {
@@ -1931,6 +2123,9 @@ declare module "@prismicio/client" {
       ContactDocumentData,
       ContactDocumentDataReachUsItem,
       ContactDocumentDataSlicesSlice,
+      GalleryDocument,
+      GalleryDocumentData,
+      GalleryDocumentDataSlicesSlice,
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,
@@ -1979,6 +2174,11 @@ declare module "@prismicio/client" {
       GallerySliceDefaultPrimary,
       GallerySliceVariation,
       GallerySliceDefault,
+      GalleryFolderSlice,
+      GalleryFolderSliceDefaultPrimaryImagesItem,
+      GalleryFolderSliceDefaultPrimary,
+      GalleryFolderSliceVariation,
+      GalleryFolderSliceDefault,
       HeaderSlice,
       HeaderSliceDefaultPrimaryNavItem,
       HeaderSliceDefaultPrimary,
