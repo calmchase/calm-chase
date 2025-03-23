@@ -1,10 +1,47 @@
 <script lang="ts">
+  import { type CarouselAPI } from "$lib/components/ui/carousel/context.js";
   import * as Carousel from "$lib/components/ui/carousel/index.js";
   import type { Content } from "@prismicio/client";
   import { PrismicImage, PrismicRichText } from "@prismicio/svelte";
   import Fade from "embla-carousel-fade";
+  import { onMount } from "svelte";
 
   export let slice: Content.PrideSlice;
+
+  let emblaApi: CarouselAPI;
+  let isHovered = false;
+  let autoplayInterval: ReturnType<typeof setInterval> | null = null;
+
+  function startAutoplay() {
+    if (isHovered || !emblaApi) return;
+
+    autoplayInterval = setInterval(() => {
+      if (emblaApi && !isHovered) {
+        emblaApi.scrollNext();
+      }
+    }, 3000);
+  }
+
+  function stopAutoplay() {
+    if (autoplayInterval) {
+      clearInterval(autoplayInterval);
+      autoplayInterval = null;
+    }
+  }
+
+  function handleMouseEnter() {
+    isHovered = true;
+    stopAutoplay();
+  }
+
+  function handleMouseLeave() {
+    isHovered = false;
+    startAutoplay();
+  }
+
+  onMount(() => {
+    return () => stopAutoplay(); // Cleanup on component unmount
+  });
 </script>
 
 <section
@@ -16,6 +53,10 @@
     OUR PRIDE
   </p>
   <Carousel.Root
+    bind:api="{emblaApi}"
+    on:init="{startAutoplay}"
+    on:mouseenter="{handleMouseEnter}"
+    on:mouseleave="{handleMouseLeave}"
     plugins="{[Fade()]}"
     opts="{{
       containScroll: false,
