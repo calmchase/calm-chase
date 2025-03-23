@@ -7,6 +7,7 @@ import Card from "./Card/index.svelte";
 import Carousel from "./Carousel/index.svelte";
 import Counter from "./Counter/index.svelte";
 import Gallery from "./Gallery/index.svelte";
+import GalleryFolder from "./GalleryFolder/index.svelte";
 import Header from "./Header/index.svelte";
 import Hero from "./Hero/index.svelte";
 import Pride from "./Pride/index.svelte";
@@ -22,6 +23,7 @@ export const components = {
   carousel: Carousel,
   counter: Counter,
   gallery: Gallery,
+  gallery_folder: GalleryFolder,
   header: Header,
   hero: Hero,
   pride: Pride,
