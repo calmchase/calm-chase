@@ -18,7 +18,7 @@
     class="grid grid-cols-2 items-stretch gap-3 px-2 md:grid-cols-4 md:gap-6 md:px-6">
     {#each slice.primary.programs as element}
       <PrismicLink field="{element.goto}" class="h-full">
-        <Card.Root class=" h-full bg-yellow1 ">
+        <Card.Root class=" h-full bg-yellow1 hover:shadow-[0_0_10px_black] ">
           <Card.Content class="flex flex-col gap-2 px-1 py-8 md:px-6">
             <Card.Title
               class="text-base font-semibold text-grey1 md:text-3xl  ">
