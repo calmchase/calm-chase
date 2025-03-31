@@ -7,6 +7,7 @@
   import { Button } from "bits-ui";
   import { onMount } from "svelte";
   import { mediaQuery } from "svelte-legos";
+  import Play from "~icons/lucide/play";
 
   const isDesktop = mediaQuery("(min-width: 768px)");
   export let slice: Content.CarouselSlice;
@@ -90,34 +91,95 @@
                 builders="{[builder]}">
                 <li class="h-44 w-44 rounded-md md:h-88 md:w-88">
                   <PrismicImage field="{item.image}" />
+                  {#if item.videolink?.trim().length}
+                    <div
+                      class="absolute inset-0 flex items-center justify-center">
+                      <div
+                        class="flex size-24 items-center justify-center rounded-full border border-neutral-800 backdrop-blur-md transition-transform duration-300 ease-out">
+                        <div
+                          class="relative flex size-20 items-center justify-center rounded-full border border-neutral-800 backdrop-blur-2xl transition-all duration-300 ease-out">
+                          <Play
+                            class="size-8"
+                            style="transition: transform 0.3s ease; color: white;" />
+                        </div>
+                      </div>
+                    </div>
+                  {/if}
                 </li>
               </Button.Root>
             </Dialog.Trigger>
-            <Dialog.Content
-              class="flex max-w-xl items-center rounded-md border-none bg-transparent p-4 ">
-              <div class="h-auto w-full rounded-md">
-                <PrismicImage field="{item.image}" />
-              </div>
-            </Dialog.Content>
+            {#if item.videolink?.trim().length}
+              <Dialog.Content
+                class="flex items-center rounded-md border-none bg-transparent p-4 ">
+                <div
+                  class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md">
+                  <div
+                    class="mx-4 aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border-2 border-white md:mx-0">
+                    <iframe
+                      src="{item.videolink}"
+                      class="size-full"
+                      title="Calm Chase demo clips"
+                      allowfullscreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+                    </iframe>
+                  </div>
+                </div>
+              </Dialog.Content>
+            {:else}
+              <Dialog.Content
+                class="flex max-w-xl items-center rounded-md border-none bg-transparent p-4 ">
+                <div class="h-auto w-full rounded-md">
+                  <PrismicImage field="{item.image}" />
+                </div>
+              </Dialog.Content>
+            {/if}
           </Dialog.Root>
         {:else}
-          <Drawer.Root
-            shouldScaleBackground
-            snapPoints="{[0.8]}"
-            bind:open="{open[i]}">
+          <Drawer.Root snapPoints="{[0.8]}" bind:open="{open[i]}">
             <Drawer.Trigger asChild let:builder>
               <Button.Root
                 class="relative border-none p-0 shadow-md hover:shadow-xl"
                 builders="{[builder]}">
                 <li class="h-44 w-44 rounded-md md:h-88 md:w-88">
                   <PrismicImage field="{item.image}" />
+                  {#if item.videolink?.trim().length}
+                    <div
+                      class="absolute inset-0 flex items-center justify-center">
+                      <div
+                        class="flex size-24 items-center justify-center rounded-full border border-neutral-800 backdrop-blur-md transition-transform duration-300 ease-out">
+                        <div
+                          class="relative flex size-20 items-center justify-center rounded-full border border-neutral-800 backdrop-blur-2xl transition-all duration-300 ease-out">
+                          <Play
+                            class="size-8"
+                            style="transition: transform 0.3s ease; color: white;" />
+                        </div>
+                      </div>
+                    </div>
+                  {/if}
                 </li>
               </Button.Root>
             </Drawer.Trigger>
-            <Drawer.Content class="h-full border-none bg-transparent px-5">
-              <div class="h-auto w-full rounded-md">
-                <PrismicImage field="{item.image}" />
-              </div>
+            <Drawer.Content
+              class="h-full border-none  bg-white/20 px-5 backdrop-blur-md">
+              {#if item.videolink?.trim().length}
+                <div class="flex h-full w-full justify-center">
+                  <div
+                    class="mx-4 mt-5 aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-white/40 bg-black/80 shadow-lg backdrop-blur-sm md:mx-0">
+                    <iframe
+                      src="{item.videolink}"
+                      class="size-full"
+                      title="Calm Chase demo clips"
+                      allowfullscreen
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+                    </iframe>
+                  </div>
+                </div>
+              {:else}
+                <div
+                  class="mt-5 h-auto w-full overflow-hidden rounded-2xl border border-white/40 bg-black/90 shadow-lg backdrop-blur-sm md:mx-0">
+                  <PrismicImage field="{item.image}" />
+                </div>
+              {/if}
             </Drawer.Content>
           </Drawer.Root>
         {/if}

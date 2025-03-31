@@ -1356,6 +1356,16 @@ export interface CarouselSliceDefaultPrimaryImagesItem {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * VideoLink field in *Carousel → Default → Primary → Images*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: carousel.default.primary.images[].videolink
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  videolink: prismic.KeyTextField;
 }
 
 /**
