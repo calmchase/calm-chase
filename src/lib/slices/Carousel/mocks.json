@@ -34,6 +34,14 @@
                   "__TYPE__": "ImageContent",
                   "thumbnails": {}
                 }
+              ],
+              [
+                "videolink",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "taken",
+                  "type": "Text"
+                }
               ]
             ]
           },
@@ -43,7 +51,6 @@
               [
                 "image",
                 {
-                  "__TYPE__": "ImageContent",
                   "provider": "imgix",
                   "url": "https://images.unsplash.com/photo-1610040855959-27944b04f12d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw0fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjkxNDc4Mjh8MA&ixlib=rb-4.0.3&q=85",
                   "alt": "orange fruit on brown wooden table",
@@ -63,7 +70,17 @@
                       "y": 0
                     }
                   },
+                  "credits": null,
+                  "__TYPE__": "ImageContent",
                   "thumbnails": {}
+                }
+              ],
+              [
+                "videolink",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "load",
+                  "type": "Text"
                 }
               ]
             ]
@@ -74,7 +91,6 @@
               [
                 "image",
                 {
-                  "__TYPE__": "ImageContent",
                   "provider": "imgix",
                   "url": "https://images.unsplash.com/photo-1592951271867-b4e76e837658?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw5fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjkxNDc4Mjh8MA&ixlib=rb-4.0.3&q=85",
                   "alt": "yellow lemon fruit on white surface",
@@ -94,7 +110,17 @@
                       "y": 0
                     }
                   },
+                  "credits": null,
+                  "__TYPE__": "ImageContent",
                   "thumbnails": {}
+                }
+              ],
+              [
+                "videolink",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "military",
+                  "type": "Text"
                 }
               ]
             ]
@@ -105,7 +131,6 @@
               [
                 "image",
                 {
-                  "__TYPE__": "ImageContent",
                   "provider": "imgix",
                   "url": "https://images.unsplash.com/photo-1629122998682-9f01c0fa89ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw4fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjkxNDc4Mjh8MA&ixlib=rb-4.0.3&q=85",
                   "alt": "orange fruits on green leaves",
@@ -125,7 +150,17 @@
                       "y": 0
                     }
                   },
+                  "credits": null,
+                  "__TYPE__": "ImageContent",
                   "thumbnails": {}
+                }
+              ],
+              [
+                "videolink",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "ancient",
+                  "type": "Text"
                 }
               ]
             ]
@@ -136,7 +171,6 @@
               [
                 "image",
                 {
-                  "__TYPE__": "ImageContent",
                   "provider": "imgix",
                   "url": "https://images.unsplash.com/photo-1568383306313-1b27a2e28071?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw2fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MjkxNDc4Mjh8MA&ixlib=rb-4.0.3&q=85",
                   "alt": "sliced fruit",
@@ -156,7 +190,17 @@
                       "y": 0
                     }
                   },
+                  "credits": null,
+                  "__TYPE__": "ImageContent",
                   "thumbnails": {}
+                }
+              ],
+              [
+                "videolink",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "between",
+                  "type": "Text"
                 }
               ]
             ]
