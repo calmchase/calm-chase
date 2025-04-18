@@ -113,20 +113,31 @@
 <style>
   @keyframes slideshow {
     0%,
-    45% {
+    15% {
       background-image: url("/bg.webp");
     }
-    50%,
-    95% {
-      background-image: url("/poster.png");
+    30% {
+      background-image: url("/SlideShow_1.webp");
+    }
+    45% {
+      background-image: url("/SlideShow_2.webp");
+    }
+    60% {
+      background-image: url("/SlideShow_3.webp");
+    }
+    75% {
+      background-image: url("/SlideShow_4.webp");
+    }
+    85% {
+      background-image: url("/SlideShow_5.webp"); 
     }
     100% {
-      background-image: url("/bg.webp");
+      background-image: url("/SlideShow_6.webp"); 
     }
   }
 
   .bg-slideshow {
-    animation: slideshow 10s infinite;
+    animation: slideshow 20s infinite;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
