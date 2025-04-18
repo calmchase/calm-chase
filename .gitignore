@@ -13,8 +13,6 @@ node_modules
 Thumbs.db
 
 # Env
-.env
-.env.*
 !.env.ci
 !.env.example
 !.env.test
@@ -33,3 +31,4 @@ scripts/exportDB.ts
 
 # ESLint
 .eslintcache
+config.bat
