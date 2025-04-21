@@ -1,6 +1,6 @@
 # Calm Chase websites
 
-Edit anything in this file, even a space will work  
+Edit anything in this file, even a space will work   
 Want to quickly get started building your own project with [Prismic][prismic] and [SvelteKit][sveltekit]? This project includes basic configurations and nothing else. The project includes one Rich Text Slice, a homepage, and a dynamic page.
 
 - **Demo**: [Open live demo][live-demo]
